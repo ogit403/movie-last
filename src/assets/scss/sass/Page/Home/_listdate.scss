@@ -1,0 +1,546 @@
+.list-date {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    &:before {
+        content: '';
+        background-image: url(../../../../../assets/img/movie-details-bg.jpg);
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 100px);
+        z-index: -1;
+    } 
+
+    .title-group {
+        background-color: transparent;
+        z-index: 1;
+        width: 100%;
+        margin-left: 15px;
+        p {
+            display: inline-block;
+            text-transform: uppercase;
+            color: #eb1689;
+            font-size: 18px;
+            font-weight: 500;
+            border-bottom: 1px solid #eb1689;
+            padding-bottom: 0;
+        }
+    }
+    
+    .wrapper-list {
+        // z-index: 2;
+        background-color: #ebebeb;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        
+        .title {
+            // z-index: 2;
+            padding: 20px;
+            padding-bottom: 0;
+            p {
+                // z-index: 2;
+                display: inline-block;
+                text-transform: uppercase;
+                color: #eb1689;
+                font-size: 18px;
+                font-weight: 600;
+                border-bottom: 1px solid #eb1689;
+            }
+        }
+
+        
+
+        .list-cinemas {
+            padding: 20px;
+            padding-top: 0;
+            // z-index: 2;
+            .cinemas {
+                
+                .group-cinemas {
+                    margin-right: 0 !important;
+                    .cinema-items {
+                        background-color: transparent;
+                        color: #000;
+                        cursor: pointer;
+                        width: 16.6666666667%;
+                        white-space: nowrap;
+                        text-align: center;
+                        opacity: 0.5;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        img {
+                            width: 60px;
+                            display: block;
+                            margin: 0 auto;
+                            height: 60px;
+                            margin-bottom: 10px;
+                        }
+                        .name {
+                            
+                            color: #000;
+                            font-size: 18px;
+                            font-weight: 600;
+
+                        }
+                    }
+                    .cinema-items.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .list-movies {
+        
+            .title {
+                background-color: #333333;  
+                p {
+                    color: white;
+                    padding: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    font-weight: 600;
+                    word-spacing: 1px;
+                    margin-bottom: 0;
+                }
+                margin-bottom: 10px;
+            }
+            .group-movie {
+
+                
+
+                .items-group {
+                    position: relative;
+                    width: 100%;
+
+                    
+
+                    &:before {
+
+                        content: '';
+                        background-image: url(../../../../../assets/img/movie-details-bg.jpg);
+                        background-position: top;
+                        background-size: cover;
+                        background-attachment: fixed;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                    } 
+
+                    .items {
+                        z-index: 1;
+                        background-color: transparent;
+                        width: 16.6666666667%;
+                        cursor: pointer;
+                        text-align: center;
+                        opacity: 0.5;
+                        transition: all 0.3;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            display: block;
+                            margin: 0 auto;
+                            margin-bottom: 5px;
+                        }
+                        .name {
+                            display: block;
+                            color: #8bc541;
+                            font-size: 16px;
+                            .main {
+                                color: #fff;
+                                font-size: 14px;
+                            }
+                        }
+                        .address {
+                            display: block;
+                            color: #949494;
+                            font-size: 12px;
+                            text-align: left;
+                            padding-left: 12px;
+                        }
+                        .detail {
+                            color: #fb4224;
+                            font-size: 12px;
+                            text-decoration: none;
+                        }
+                    }
+                    .items.active {
+                        opacity: 1;
+                    }
+                }
+                
+                .list-content {
+                    padding-bottom: 10px;
+                    .movie-content {
+                        
+                        background-color: #eb1689;
+                        .movie-group {
+                            background-color: #ebebeb;
+                            .movie-content {
+                                padding: 0 10px;
+                                margin-left: 0;
+                                margin-right:  0;
+                                margin-bottom: 10px;
+                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+                                position: relative;
+                                .movie-image {
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                    .poster {
+                                        width: 220px;
+                                        a {
+                                            img {
+                                                height: 100%;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                .movie-info {
+                                    position: relative;
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                    background-color: white;
+                                    padding: 20px;
+                                    .age {
+                                        right: 80px;
+                                        background-color: #191025;
+                                        color: #fff;
+                                        height: 55px;
+                                        position: absolute;
+                                        top: -10px;
+                                        padding: 10px 0;
+                                        width: 45px;
+                                        font-size: 18px;
+                                        box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.9);
+                                        text-align: center;
+                                    }
+                                    .type {
+                                        right: 20px;
+                                        background-color: #f29438;
+                                        color: #fff;
+                                        height: 55px;
+                                        position: absolute;
+                                        top: -10px;
+                                        padding: 10px 0;
+                                        width: 45px;
+                                        font-size: 18px;
+                                        box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.9);
+                                        text-align: center;
+                                    }
+                                    .name-movie {
+                                        h2 {
+                                            color: #000;
+                                            font-size: 24px;
+                                            font-weight: 500;
+                                            margin-bottom: 0;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                    .translate {
+                                        span {
+                                            color: #000;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                    .star {
+                                        background-color: #333333;
+                                        padding: 5px 8px;
+                                        display: inline-block;
+                                        border-radius: 5px;
+                                        margin-bottom: 10px;
+                                        i {
+                                            color: #ffb90b;
+                                        }
+                                    }
+                                    .movie-center {
+                                        .first, .second, .third {
+                                            color: #000;
+                                            .main {
+                                                font-weight: 700;
+                                                span {
+                                                    font-weight: 500;
+                                                }
+                                            }
+                                        }
+                                        margin-bottom: 15px;
+                                    }
+                                    .time {
+                                        cursor: pointer;
+                                        .watch {
+                                            width: calc(14% - 10px);
+                                             float: left;
+                                            
+            
+                                            // display: inline-block;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            margin: 0 10px 10px 0;
+                                            padding: 5px 0;
+                                            transition: all .2s;
+                                            text-decoration: none;
+                                            display: block;
+                                            text-align: center;
+                                            background-color: transparent;  
+                                            border-radius: 7px;
+                                            color: #9b9b9b;
+                                            border: 1px solid #e4e4e4;
+                                            
+                                            span {
+                                                font-size: 18px;
+                                                font-weight: 500;
+                                                color: #108f3e;
+                                                
+                                            }
+                
+                                            &:hover {  
+                                                .watch-1 {
+                
+                                                    color: #f29438;
+                                                }                           
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .list-date {
+        .list-cinemas {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            min-width: 100% !important;
+            .cinemas {
+                width: 200%;
+                .cinema-items {
+                    width: 10% !important;
+                }
+            }
+        }
+        .scroll-items {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            min-width: 100% !important;
+            .items-group {
+                width: 200% !important;
+                .main {
+                    margin-bottom: 0 !important;
+                }
+                .address {
+                    text-align: center !important;
+                }
+                .items {
+                    width: 10% !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 987px) {
+    .list-date {
+        .movie-image{
+            text-align: center;
+        }
+        .poster {
+            width: 100% !important;
+            img {
+                width: 180px !important;
+            }
+        }
+        .list-cinemas {
+            .cinemas {
+                .cinema-items {
+                    width: 11% !important;
+                }
+            }
+        }
+        .scroll-items {
+            .items-group {
+                .items {
+                    width: 11% !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .list-date {
+        .watch {
+            width: 14% !important;
+        }
+        .cinema-items {
+            img {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            .name {
+                font-size: 14px !important;
+            }
+        }
+
+        .list-cinemas {
+            .cinemas {
+                .cinema-items {
+                    width: 10% !important;
+                }
+            }
+        }
+        .scroll-items {
+            .items-group {
+                .items {
+                    width: 14% !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .list-date {
+        .list-cinemas {
+            .cinemas {
+                .cinema-items {
+                    width: 14% !important;
+                }
+            }
+        }
+        .scroll-items {
+            .items-group {
+                .items {
+                    width: 16% !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .list-date {
+        .star {
+            i {
+                font-size: 10px !important;
+            }
+        }
+
+        .first, .second, .third {
+            .main {
+                font-size: 12px !important;
+                span {
+                    font-size: 13px !important;
+                }
+            }
+        }
+        .watch-1 {
+            font-size: 11px !important;
+        }
+
+        .list-cinemas {
+            .cinemas {
+                .cinema-items {
+                    width: 16% !important;
+                }
+            }
+        }
+        .scroll-items {
+            .items-group {
+                .items {
+                    width: 18% !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .list-date {
+        .cinema-items {
+            img {
+                width: 30px !important;
+                height: 30px !important;
+            }
+            .name {
+                font-size: 11px !important;
+            }
+        }
+        .list-cinemas {
+            min-width: 110% !important;
+            .cinemas {
+                .cinema-items {
+                    width: 15% !important;
+                }
+            }
+        }
+        .scroll-items {
+            .items-group {
+                .items {
+                    width: 20% !important;
+                }
+            }
+        }
+        .watch {
+            width: 13% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .list-date {
+        .list-cinemas {
+            .cinemas {
+                .cinema-items {
+                    width: 16% !important;
+                }
+            }
+        }
+        .scroll-items {
+            .items-group {
+                .items {
+                    width: 22% !important;
+                }
+            }
+        }
+        .watch {
+            width: 13% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .list-date {
+
+        .watch {
+            width: 12% !important;
+        }
+    }
+}

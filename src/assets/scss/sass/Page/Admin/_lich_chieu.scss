@@ -1,0 +1,94 @@
+.content {
+	width: 82%;
+    background: linear-gradient(to right, rgb(172, 182, 229), rgb(116, 235, 213));
+    height: 2000px;
+    padding: 15px;
+	.lich-chieu {
+		.title {
+			h1 {
+				font-weight: 700;
+				color: #000;
+				font-size: 25px;
+			}
+	
+		}
+		.lich-chieu-content{
+			.left {
+				.dropdown-hethongrap, .dropdown-cumrap, .dropdown-rap {
+					border: 1px solid #000 !important;
+					border-radius: 5px;
+					margin-bottom: 10px;
+					select {
+						color: #000;
+						font-weight: 600;
+					}
+				}
+			}
+			.right {
+				.input-select {
+					margin-bottom: 10px;
+					span {
+						width: 180px;
+						color: #000;
+						font-weight: 700;
+						display: inline-block;
+					}
+					input {
+						padding: 0px 10px;
+					}
+				}
+			}
+			
+		}
+	}
+}
+.lich-chieu-phim {
+	margin-top: 50px;
+	.table-list {
+		padding: 0 20px;
+		table {
+			color: #000;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #000;
+			border-image: initial;  
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 1rem;
+			text-align: center;
+
+			thead {
+				color: rgb(0, 123, 255);
+				font-weight: 700;
+				th {
+					padding: 5px 10px;
+					border-bottom-width: 2px;
+					vertical-align: bottom;
+					border-bottom: 2px solid rgb(222, 226, 230);
+					border-width: 1px;
+					border-style: solid;
+					border-color: #000;
+					border-image: initial;
+				}
+				
+
+			}
+			td {
+				padding: 10px 0;
+				padding-bottom: 20px;
+				border-bottom-width: 2px;
+				vertical-align: bottom;
+				border-bottom: 2px solid rgb(222, 226, 230);
+				border-width: 1px;
+				border-style: solid;
+				border-color: #000;
+				border-image: initial;
+			}
+			.btn-movie {
+				padding-bottom: 10px;
+				white-space: nowrap;
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,1245 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <!-- Quicksand -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Roboto -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+        <!-- CSS BS4 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="./css/slick-theme.css">
+        <!-- main CSS -->
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+
+    <body id="style-1">
+        
+        <div class="wrapper">
+
+            <header>    
+                <div class="container">
+                    <div class="icon">
+                        <a href="#">
+                            <img src="./img/header/touchcinema.png" alt="">
+                        </a>      
+                    </div>
+                    <div class="content">
+                        <div class="top-button">
+                            <div class="row">
+                                <div class="col-8" style="padding-bottom: 5px;">
+                                    <a class="buy-ticket" href="#">
+                                        <img src="./img/header/dat-ve-ngay.png" alt="">
+                                    </a>
+                                    <a href="#" class="flags">
+                                        <img src="./img/header/vn.png" alt="">
+                                    </a>
+                                    <form class="d-flex form-search">
+                                        <input class="form-control me-2 group" placeholder="Tìm kiếm" aria-label="Search">
+                                        <button class="button-search" type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                                <div class="col-4 right-button">
+                                    <a href="#" class="login">
+                                        <img src="./img/header/so-da.png" alt="">
+                                        <span>ĐĂNG NHẬP</span>
+
+                                    </a>
+                                    <a href="#" class="regist">
+                                        <img src="./img/header/bong-ngo.png" alt="">
+                                        <span>ĐĂNG KÍ 
+                                            <b>THÀNH VIÊN</b>
+                                        </span>
+                                        
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-button">
+                            <ul>
+                                <li>
+                                    <a href="#" class="active">TRANG CHỦ</a>
+                                </li>
+                                <li>
+                                    <a href="#">PHIM</a>
+                                </li>
+                                <li>
+                                    <a href="#">LỊCH CHIẾU</a>
+                                </li>
+                                <li>
+                                    <a href="#">ƯU ĐÃI - SỰ KIỆN</a>
+                                </li>
+                                <li>
+                                    <a href="#">ĐIỆN ẢNH</a>
+                                </li>
+                                <li>
+                                    <a href="#">ĐÁNH GIÁ PHIM</a>
+                                </li>
+                                <li>
+                                    <a href="#">LIÊN HỆ</a>
+                                </li>
+                                <li>
+                                    <a href="#">GIỚI THIỆU</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-right">
+                                <li>
+                                    <div class="notifi">
+                                        <i class="fa fa-bell"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="carousel" style="overflow: hidden;">
+                <div class="carousel-group" >
+                    <a class="items">
+                        <img src="./img/carousel/1920x1080-4.png" alt="">
+                    </a>
+                    <a class="items">
+                        <img src="./img/carousel/1920wx1080h.jpg" alt="">
+                    </a>
+                    <a class="items">
+                        <img src="./img/carousel/1920x1080-3.png" alt="">
+                    </a>
+                    <a class="items">
+                        <img src="./img/carousel/1920x1080-36.jpg" alt="">
+                    </a>
+                </div>
+            </section>
+            <section class="list-book">
+                <div class="warpper-list-book">
+                   <div class="wrapper-book">
+                        <div class="btn-group select-width book-movie" role="group">
+                            <button id="book-movie" type="button" class="btn btn-primary dropdown-toggle selectMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            Phim
+                            </button>
+                            <ul class="dropdown-menu scrollbar" aria-labelledby="book-movie" id="style-2">
+                            <li><a class="dropdown-item" href="#">Gái Già Lắm Chiêu V - Những Cuộc Đời Vương Giả</a></li>
+                            <li><a class="dropdown-item" href="#">Bố Già</a></li>
+                            <li><a class="dropdown-item" href="#">Raya and the Last Dragon</a></li>
+                            <li><a class="dropdown-item" href="#">PALM SPRINGS: Mở mắt thấy hôm qua</a></li>
+                            <li><a class="dropdown-item" href="#">Gái Già Lắm Chiêu V - Những Cuộc Đời Vương Giả</a></li>
+                            <li><a class="dropdown-item" href="#">Bố Già</a></li>
+                            <li><a class="dropdown-item" href="#">Raya and the Last Dragon</a></li>
+                            <li><a class="dropdown-item" href="#">PALM SPRINGS: Mở mắt thấy hôm qua</a></li>
+                            <li><a class="dropdown-item" href="#">Gái Già Lắm Chiêu V - Những Cuộc Đời Vương Giả</a></li>
+                            <li><a class="dropdown-item" href="#">Bố Già</a></li>
+                            <li><a class="dropdown-item" href="#">Raya and the Last Dragon</a></li>
+                            <li><a class="dropdown-item" href="#">PALM SPRINGS: Mở mắt thấy hôm qua</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group select-width book-theater" role="group">
+                            <button id="book-theater" type="button" class="btn btn-primary dropdown-toggle selectMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rạp
+                            </button>
+                            <ul class="dropdown-menu scrollbar" aria-labelledby="book-theater" id="style-2">
+                            <li><a class="dropdown-item" href="#">BHD Star Bitexco</a></li>
+                            <li><a class="dropdown-item" href="#">BHD Star Vincom 3/2</a></li>
+                            <li><a class="dropdown-item" href="#">BHD Star Vincom Lê Văn Việt</a></li>
+                            <li><a class="dropdown-item" href="#">BHD Star Vincom Quang Trung</a></li>
+                            <li><a class="dropdown-item" href="#">BHD Star Vincom Thảo Điền</a></li>
+                            <li><a class="dropdown-item" href="#">BHD Star ‎Phạm Hùng</a></li>
+                            <li><a class="dropdown-item" href="#">CineStar Hai Bà Trưng</a></li>
+                            <li><a class="dropdown-item" href="#">CineStar Quốc Thanh</a></li>
+                            <li><a class="dropdown-item" href="#">DCINE Bến Thành</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group select-width book-date" role="group">
+                            <button id="book-date" type="button" class="btn btn-primary dropdown-toggle selectMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ngày xem
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="book-date">
+                            <li><a class="dropdown-item" href="#">
+                                <span class="date">Hôm nay</span>
+                                <span class="d-m-y">09-03-2021</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <span class="date">Hôm mai</span>
+                                <span class="d-m-y">10-03-2021</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <span class="date">Thứ năm</span>
+                                <span class="d-m-y">11-03-2021</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <span class="date">Thứ sáu</span>
+                                <span class="d-m-y">12-03-2021</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <span class="date">Thứ bảy</span>
+                                <span class="d-m-y">13-03-2021</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <span class="date">Chủ nhật</span>
+                                <span class="d-m-y">14-03-2021</span>
+                            </a></li>
+                        </div>
+                        <div class="btn-group select-width book-screen" role="group">
+                            <button id="book-screen" type="button" class="btn btn-primary dropdown-toggle selectMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            Suất chiếu
+                            </button>
+                            <ul class="dropdown-menu scrollbar" aria-labelledby="book-screen" id="style-2">
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+                            <li><a class="dropdown-item" href="#">13:10</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="btn-group select-width book-button" role="group">
+                            <button id="book-movie" type="button" class="btn btn-primary">
+                            MUA VÉ NGAY
+                            </button>
+                        </div>
+                   </div>
+                </div>
+            </section>
+            <section class="list">
+                <div class="wrapper-list">
+                    <div class="list-content">
+                        <div class="row">
+                            <div class="col-6 list-left">
+                                <ul class="nav nav-pills mb-3 list-title" id="pills-tab" role="tablist">
+                                    <li class="nav-item now-showing" role="presentation" style="padding-right: 30px;">
+                                        <a href="#" class="nav-link active"  id="pills-showing-tab" data-bs-toggle="pill" data-bs-target="#pills-showing" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Đang chiếu <sup>(5 phim)</sup> </a>
+                                    </li>
+                                    <li class="nav-item now-soon" role="presentation">
+                                        <a href="#" class="nav-link" id="pills-soon-tab" data-bs-toggle="pill" data-bs-target="#pills-soon" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Sắp chiếu</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 list-right">
+                                <form class="d-flex" style="float: right;">
+                                    <input class="form-control me-2 search-movie" placeholder="Tìm kiếm..." aria-label="Search">
+                                    <button class="btn btn-outline-success search-button" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                  </form>
+                            </div>
+                        </div>
+                     
+                     <div class="tab-content " id="pills-tabContent">
+                         <div class="tab-pane fade show active" id="pills-showing" role="tabpanel" aria-labelledby="pills-showing-tab">
+                             <div class="list-showing">
+                                 <div class="items">
+                                     <div class="items-image">
+                                         <div class="showHidden">
+                                             <button>
+                                                <img src="./img/list/play-video.png" alt="">
+                                             </button>
+                                         </div>
+                                        <img src="./img/list/lua-deu-gap-lua-dao-the-con-heartist-c16-16082739589858_215x318.png" alt="">
+                                        <span class="type isShow">
+                                            <img src="./img/list/c-13.png" alt="">
+                                        </span>
+                                        <span class="rate isShow">
+                                            <p class="point">9</p>
+                                            <p class="star">
+                                                <img src="./img/list/star1.png" alt="">
+                                                <img src="./img/list/star1.png" alt="">
+                                                <img src="./img/list/star1.png" alt="">
+                                                <img src="./img/list/star1.png" alt="">
+                                                <img src="./img/list/star1.2.png" alt="">
+                                            </p>
+                                        </span>
+                                        <span class="screen-soon isShow">Suất chiếu sớm</span>
+                                        <div class="showBuy">
+                                            <button class="buy-btn">
+                                                <img src="./img/list/icon-ticket.png" alt="">
+                                                <span>Mua Vé Ngay</span>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                     <div class="items-info isShow">
+                                        <p class="title">Lừa đểu gặp lừa đảo</p>
+                                        <p class="time">117 phút</p>
+                                     </div>
+                                 </div>
+                                 <div class="items">
+                                    <div class="items-image">
+                                       
+                                       <div class="showHidden">
+                                        <button>
+                                           <img src="./img/list/play-video.png" alt="">
+                                        </button>
+                                        </div>
+                                        <img src="./img/list/chi-muoi-ba-2-16061875740652_215x318.png" alt="">
+                                        <span class="type isShow">
+                                       <img src="./img/list/c-13.png" alt="">
+                                        </span>
+                                        <span class="rate isShow">
+                                       <p class="point">9</p>
+                                       <p class="star">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.2.png" alt="">
+                                       </p>
+                                        </span>
+                                        <span class="screen-soon isShow">Suất chiếu sớm</span>
+                                        <div class="showBuy">
+                                            <button class="buy-btn">
+                                                <img src="./img/list/icon-ticket.png" alt="">
+                                                <span>Mua Vé Ngay</span>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="items-info isShow">
+                                        <p class="title">Lừa đểu gặp lừa đảo</p>
+                                        <p class="time">117 phút</p>
+                                     </div>
+                                </div>
+                                <div class="items">
+                                    <div class="items-image">
+                                      
+
+                                       <div class="showHidden">
+                                        <button>
+                                           <img src="./img/list/play-video.png" alt="">
+                                        </button>
+                                        </div>
+                                        <img src="./img/list/nghe-sieu-kho-extreme-job-c18-16074190927361_215x318.png" alt="">
+                                        <span class="type isShow">
+                                       <img src="./img/list/c-13.png" alt="">
+                                        </span>
+                                        <span class="rate isShow">
+                                       <p class="point">9</p>
+                                       <p class="star">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.2.png" alt="">
+                                       </p>
+                                        </span>
+                                        <span class="screen-soon isShow">Suất chiếu sớm</span>
+                                        <div class="showBuy">
+                                            <button class="buy-btn">
+                                                <img src="./img/list/icon-ticket.png" alt="">
+                                                <span>Mua Vé Ngay</span>
+                                            </button>
+
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="items-info isShow">
+                                        <p class="title">Lừa đểu gặp lừa đảo</p>
+                                        <p class="time">117 phút</p>
+                                     </div>
+                                </div>
+                                <div class="items">
+                                    <div class="items-image">
+                                       <div class="showHidden">
+                                        <button>
+                                           <img src="./img/list/play-video.png" alt="">
+                                        </button>
+                                        </div>
+                                        <img src="./img/list/thanh-guom-diet-quy-chuyen-tau-vo-tan-demon-slayer-the-movie-mugen-train-p-16063888466666_215x318.png" alt="">
+                                        <span class="type isShow">
+                                       <img src="./img/list/c-13.png" alt="">
+                                        </span>
+                                        <span class="rate isShow">
+                                       <p class="point">9</p>
+                                       <p class="star">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.png" alt="">
+                                           <img src="./img/list/star1.2.png" alt="">
+                                       </p>
+                                        </span>
+                                        <span class="screen-soon isShow">Suất chiếu sớm</span>
+                                        <div class="showBuy">
+                                            <button class="buy-btn">
+                                                <img src="./img/list/icon-ticket.png" alt="">
+                                                <span>Mua Vé Ngay</span>
+                                            </button>
+
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="items-info isShow">
+                                        <p class="title">Lừa đểu gặp lừa đảo</p>
+                                        <p class="time">117 phút</p>
+                                     </div>
+                                </div>
+                             </div>
+
+                         </div>
+                         <div class="tab-pane fade" id="pills-soon" role="tabpanel" aria-labelledby="pills-soon-tab">
+                             <div class="list-soon">
+                                <div class="items">
+                                    <div class="items-image">
+                                       <img src="./img/list/chi-muoi-ba-2-16061875740652_215x318.png" alt="">
+                                    </div>
+                                    <div class="items-info">
+
+                                    </div>
+                                </div>
+                                <div class="items">
+                                    <div class="items-image">
+                                       <img src="./img/list/chi-muoi-ba-2-16061875740652_215x318.png" alt="">
+                                    </div>
+                                    <div class="items-info">
+
+                                    </div>
+                                </div>
+                                <div class="items">
+                                    <div class="items-image">
+                                       <img src="./img/list/chi-muoi-ba-2-16061875740652_215x318.png" alt="">
+                                    </div>
+                                    <div class="items-info">
+
+                                    </div>
+                                </div>
+                                <div class="items">
+                                    <div class="items-image">
+                                       <img src="./img/list/chi-muoi-ba-2-16061875740652_215x318.png" alt="">
+                                    </div>
+                                    <div class="items-info">
+
+                                    </div>
+                                </div>
+                                <div class="items">
+                                    <div class="items-image">
+                                       <img src="./img/list/chi-muoi-ba-2-16061875740652_215x318.png" alt="">
+                                    </div>
+                                    <div class="items-info">
+
+                                    </div>
+                                </div>
+                             </div>
+                         </div>
+                     </div>
+                    </div>
+                </div>
+            </section>
+            <section class="theater">
+                <div class="wrapper-theater">
+                    <div class="theater-title">
+                        <a href="#">Cụm rạp - Lịch chiếu</a>
+                    </div>
+   
+                    <div class="d-flex align-items-start">
+                        <div class="nav flex-column nav-pills me-3 theater-first" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                          <a class="nav-link active" id="v-pills-bhd-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bhd" type="button" role="tab" aria-controls="v-pills-bhd" aria-selected="true">
+                                <img src="./img/theater/f32670fd0eb083c9c4c804f0f3a252ed.png" alt="">
+                          </a>
+                          <a class="nav-link" id="v-pills-cinestar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cinestar" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <img src="./img/theater/1721cfa98768f300c03792e25ceb0191.png" alt="">
+                          </a>
+                          <a class="nav-link" id="v-pills-ddc-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ddc" type="button" role="tab" aria-controls="v-pills-ddc" aria-selected="false">
+                            <img src="./img/theater/9b240f96a233bb43203ee514a21a6004.png" alt="">
+                           </a>
+                           <a class="nav-link" id="v-pills-mega-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mega" type="button" role="tab" aria-controls="v-pills-mega" aria-selected="false">
+                             <img src="./img/theater/7b078639bd8fdb09dd83652d207c7b90.png" alt="">
+                           </a>
+                           <a class="nav-link" id="v-pills-dcine-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dcine" type="button" role="tab" aria-controls="v-pills-dcine" aria-selected="false">
+                            <img src="./img/theater/9ff07a03371c4a09260309faa32caa55.jpg" alt="">
+                           </a>
+                           <a class="nav-link" id="v-pills-lotte-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lotte" type="button" role="tab" aria-controls="v-pills-lotte" aria-selected="false">
+                            <img src="./img/theater/404b8c4b80d77732e7426cdb7e24be20.png" alt="">
+                           </a>
+                        </div>
+
+
+                        <div class="tab-content theater-second" id="v-pills-tabContent" style="color: white;">
+
+                          <div class="tab-pane fade show active theater-bhd" id="v-pills-bhd" role="tabpanel" aria-labelledby="v-pills-bhd-tab">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab2" role="tablist" aria-orientation="vertical">
+                                  <div class="nav-link active" id="v-pills-bhd-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-bhd1" type="button" role="tab" aria-controls="v-pills-bhd1" aria-selected="true">
+                                      <div class="theater-items">
+                                          <img class="items-img" src="./img/theater/bhd-star-bitexco-16105952137769.png" alt="">
+                                          <div class="items-title">
+                                            <span class="items-name">
+                                                <span class="items-name-1">BHD Star </span>
+                                                - Bitexco
+                                            </span>
+                                            <span class="items-address">
+                                                L3-Bitexco Icon 68, 2 Hải Triề
+                                            </span>
+                                            <span class="items-btn">
+                                                <a href="#">[chi tiết]</a>
+                                            </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="nav-link" id="v-pills-bhd-tab2" data-bs-toggle="pill" data-bs-target="#v-pills-bhd2" type="button" role="tab" aria-controls="v-pills-bhd2" aria-selected="false">
+                                    <div class="theater-items">
+                                        <img class="items-img" src="./img/theater/bhd-star-bitexco-16105952137769.png" alt="">
+                                        <div class="items-title">
+                                          <span class="items-name">
+                                              <span class="items-name-1">BHD Star </span>
+                                              - Bitexco
+                                          </span>
+                                          <span class="items-address">
+                                              L3-Bitexco Icon 68, 2 Hải Triề
+                                          </span>
+                                          <span class="items-btn">
+                                              <a href="#">[chi tiết]</a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="nav-link" id="v-pills-bhd-tab3" data-bs-toggle="pill" data-bs-target="#v-pills-bhd3" type="button" role="tab" aria-controls="v-pills-bhd3" aria-selected="false">
+                                    <div class="theater-items">
+                                        <img class="items-img" src="./img/theater/bhd-star-bitexco-16105952137769.png" alt="">
+                                        <div class="items-title">
+                                          <span class="items-name">
+                                              <span class="items-name-1">BHD Star </span>
+                                              - Bitexco
+                                          </span>
+                                          <span class="items-address">
+                                              L3-Bitexco Icon 68, 2 Hải Triề
+                                          </span>
+                                          <span class="items-btn">
+                                              <a href="#">[chi tiết]</a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="nav-link" id="v-pills-bhd-tab4" data-bs-toggle="pill" data-bs-target="#v-pills-bhd4" type="button" role="tab" aria-controls="v-pills-bhd4" aria-selected="false">
+                                    <div class="theater-items">
+                                        <img class="items-img" src="./img/theater/bhd-star-bitexco-16105952137769.png" alt="">
+                                        <div class="items-title">
+                                          <span class="items-name">
+                                              <span class="items-name-1">BHD Star </span>
+                                              - Bitexco
+                                          </span>
+                                          <span class="items-address">
+                                              L3-Bitexco Icon 68, 2 Hải Triề
+                                          </span>
+                                          <span class="items-btn">
+                                              <a href="#">[chi tiết]</a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="nav-link" id="v-pills-bhd-tab5" data-bs-toggle="pill" data-bs-target="#v-pills-bhd5" type="button" role="tab" aria-controls="v-pills-bhd5" aria-selected="false">
+                                    <div class="theater-items">
+                                        <img class="items-img" src="./img/theater/bhd-star-bitexco-16105952137769.png" alt="">
+                                        <div class="items-title">
+                                          <span class="items-name">
+                                              <span class="items-name-1">BHD Star </span>
+                                              - Bitexco
+                                          </span>
+                                          <span class="items-address">
+                                              L3-Bitexco Icon 68, 2 Hải Triề
+                                          </span>
+                                          <span class="items-btn">
+                                              <a href="#">[chi tiết]</a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="nav-link" id="v-pills-bhd-tab6" data-bs-toggle="pill" data-bs-target="#v-pills-bhd6" type="button" role="tab" aria-controls="v-pills-bhd6" aria-selected="false">
+                                    <div class="theater-items">
+                                        <img class="items-img" src="./img/theater/bhd-star-bitexco-16105952137769.png" alt="">
+                                        <div class="items-title">
+                                          <span class="items-name">
+                                              <span class="items-name-1">BHD Star </span>
+                                              - Bitexco
+                                          </span>
+                                          <span class="items-address">
+                                              L3-Bitexco Icon 68, 2 Hải Triề
+                                          </span>
+                                          <span class="items-btn">
+                                              <a href="#">[chi tiết]</a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                               
+                                <div class="tab-content theater-content scrollbar" id="style-0">
+                                  <div class="tab-pane fade show active" id="v-pills-bhd1" role="tabpanel" aria-labelledby="v-pills-bhd-tab1">
+                                      <div class="items-content">
+                                          <div class="items-movie">
+                                                <img src="./img/theater/gai-gia-lam-chieu-v-nhung-cuoc-doi-vuong-gia-16141605727831_60x60.jpg" alt="">
+                                                <div class="movie-info">
+                                                    <p class="title-1">
+                                                        <span class="type">P</span>
+                                                        <span class="info">Raya and the Last Dragon</span>
+                                                    </p>
+                                                    <p class="title-2">117 phút - TIX 9 - IMDb 0</p>
+                                                </div>
+                                          </div>
+                                          <div class="info-items">
+                                                <div class="type">
+                                                    2D Digital
+                                                </div>
+                                                <div class="time">
+                                                    <a href="#" class="watch">
+                                                        <span class="watch-1">17:10 </span>
+                                                        ~ 19:07
+                                                    </a>
+                                                    <a href="#" class="watch">
+                                                        <span class="watch-1">19:15 </span>
+                                                        ~ 21:12
+                                                    </a>
+                                                </div>
+                                          </div>
+                                      </div>
+                                      <div class="items-content">
+                                        <div class="items-movie">
+                                              <img src="./img/theater/gai-gia-lam-chieu-v-nhung-cuoc-doi-vuong-gia-16141605727831_60x60.jpg" alt="">
+                                              <div class="movie-info">
+                                                  <p class="title-1">
+                                                      <span class="type">P</span>
+                                                      <span class="info">Raya and the Last Dragon</span>
+                                                  </p>
+                                                  <p class="title-2">117 phút - TIX 9 - IMDb 0</p>
+                                              </div>
+                                        </div>
+                                        <div class="info-items">
+                                              <div class="type">
+                                                  2D Digital
+                                              </div>
+                                              <div class="time">
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">17:10 </span>
+                                                      ~ 19:07
+                                                  </a>
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">19:15 </span>
+                                                      ~ 21:12
+                                                  </a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="items-content">
+                                        <div class="items-movie">
+                                              <img src="./img/theater/gai-gia-lam-chieu-v-nhung-cuoc-doi-vuong-gia-16141605727831_60x60.jpg" alt="">
+                                              <div class="movie-info">
+                                                  <p class="title-1">
+                                                      <span class="type">P</span>
+                                                      <span class="info">Raya and the Last Dragon</span>
+                                                  </p>
+                                                  <p class="title-2">117 phút - TIX 9 - IMDb 0</p>
+                                              </div>
+                                        </div>
+                                        <div class="info-items">
+                                              <div class="type">
+                                                  2D Digital
+                                              </div>
+                                              <div class="time">
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">17:10 </span>
+                                                      ~ 19:07
+                                                  </a>
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">19:15 </span>
+                                                      ~ 21:12
+                                                  </a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="items-content">
+                                        <div class="items-movie">
+                                              <img src="./img/theater/gai-gia-lam-chieu-v-nhung-cuoc-doi-vuong-gia-16141605727831_60x60.jpg" alt="">
+                                              <div class="movie-info">
+                                                  <p class="title-1">
+                                                      <span class="type">P</span>
+                                                      <span class="info">Raya and the Last Dragon</span>
+                                                  </p>
+                                                  <p class="title-2">117 phút - TIX 9 - IMDb 0</p>
+                                              </div>
+                                        </div>
+                                        <div class="info-items">
+                                              <div class="type">
+                                                  2D Digital
+                                              </div>
+                                              <div class="time">
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">17:10 </span>
+                                                      ~ 19:07
+                                                  </a>
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">19:15 </span>
+                                                      ~ 21:12
+                                                  </a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="items-content">
+                                        <div class="items-movie">
+                                              <img src="./img/theater/gai-gia-lam-chieu-v-nhung-cuoc-doi-vuong-gia-16141605727831_60x60.jpg" alt="">
+                                              <div class="movie-info">
+                                                  <p class="title-1">
+                                                      <span class="type">P</span>
+                                                      <span class="info">Raya and the Last Dragon</span>
+                                                  </p>
+                                                  <p class="title-2">117 phút - TIX 9 - IMDb 0</p>
+                                              </div>
+                                        </div>
+                                        <div class="info-items">
+                                              <div class="type">
+                                                  2D Digital
+                                              </div>
+                                              <div class="time">
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">17:10 </span>
+                                                      ~ 19:07
+                                                  </a>
+                                                  <a href="#" class="watch">
+                                                      <span class="watch-1">19:15 </span>
+                                                      ~ 21:12
+                                                  </a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="v-pills-bhd2" role="tabpanel" aria-labelledby="v-pills-bhd-tab2">---bbb</div>
+                                  <div class="tab-pane fade" id="v-pills-bhd3" role="tabpanel" aria-labelledby="v-pills-bhd-tab3">---ccc</div>
+                                  <div class="tab-pane fade" id="v-pills-bhd4" role="tabpanel" aria-labelledby="v-pills-bhd-tab4">---ddd</div>
+                                  <div class="tab-pane fade" id="v-pills-bhd5" role="tabpanel" aria-labelledby="v-pills-bhd-tab5">---eee</div>
+                                  <div class="tab-pane fade" id="v-pills-bhd6" role="tabpanel" aria-labelledby="v-pills-bhd-tab6">---fff</div>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div class="tab-pane fade theater-cinestar" id="v-pills-cinestar" role="tabpanel" aria-labelledby="v-pills-cinestar-tab">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab3" role="tablist" aria-orientation="vertical">
+                                  <button class="nav-link active" id="v-pills-cinestar-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-cinestar1" type="button" role="tab" aria-controls="v-pills-cinestar1" aria-selected="true">AAA</button>
+                                  <button class="nav-link" id="v-pills-cinestar-tab2" data-bs-toggle="pill" data-bs-target="#v-pills-cinestar2" type="button" role="tab" aria-controls="v-pills-cinestar2" aria-selected="false">BBB</buttona>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent3">
+                                  <div class="tab-pane fade show active" id="v-pills-cinestar1" role="tabpanel" aria-labelledby="v-pills-cinestar-tab1">**aaa</div>
+                                  <div class="tab-pane fade" id="v-pills-cinestar2" role="tabpanel" aria-labelledby="v-pills-cinestar-tab2">***bbb</div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="tab-pane fade theater-ddc" id="v-pills-ddc" role="tabpanel" aria-labelledby="v-pills-ddc-tab">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab4" role="tablist" aria-orientation="vertical">
+                                  <button class="nav-link active" id="v-pills-ddc-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-ddc1" type="button" role="tab" aria-controls="v-pills-ddc1" aria-selected="true">AAA</button>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent4">
+                                  <div class="tab-pane fade show active" id="v-pills-ddc1" role="tabpanel" aria-labelledby="v-pills-ddc-tab1">**aaa</div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="tab-pane fade theater-mega" id="v-pills-mega" role="tabpanel" aria-labelledby="v-pills-mega-tab">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab5" role="tablist" aria-orientation="vertical">
+                                  <button class="nav-link active" id="v-pills-mega-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-mega1" type="button" role="tab" aria-controls="v-pills-mega1" aria-selected="true">AAA</button>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent5">
+                                  <div class="tab-pane fade show active" id="v-pills-mega1" role="tabpanel" aria-labelledby="v-pills-mega-tab1">**aaa</div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="tab-pane fade theater-dcine" id="v-pills-dcine" role="tabpanel" aria-labelledby="v-pills-dcine-tab">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab6" role="tablist" aria-orientation="vertical">
+                                  <button class="nav-link active" id="v-pills-dcine-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-dcine1" type="button" role="tab" aria-controls="v-pills-dcine1" aria-selected="true">AAA</button>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent6">
+                                  <div class="tab-pane fade show active" id="v-pills-dcine1" role="tabpanel" aria-labelledby="v-pills-dcine-tab1">**aaa</div>
+                                </div>
+                            </div>
+                          </div>
+
+
+                          <div class="tab-pane fade theater-lotte" id="v-pills-lotte" role="tabpanel" aria-labelledby="v-pills-lotte-tab">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab7" role="tablist" aria-orientation="vertical">
+                                  <a class="nav-link active" id="v-pills-lotte-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-bhd1" type="button" role="tab" aria-controls="v-pills-bhd1" aria-selected="true">A</a>
+                                  <a class="nav-link" id="v-pills-lotte-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-lotte2" type="button" role="tab" aria-controls="v-pills-lotte2" aria-selected="false">B</buttona>
+                                  <a class="nav-link" id="v-pills-lotte-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-lotte3" type="button" role="tab" aria-controls="v-pills-lotte3" aria-selected="false">C</a>
+                                  <a class="nav-link" id="v-pills-lotte-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-lotte4" type="button" role="tab" aria-controls="v-pills-lotte4" aria-selected="false">D</a>
+                                  <a class="nav-link" id="v-pills-lotte-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-lotte5" type="button" role="tab" aria-controls="v-pills-lotte5" aria-selected="false">E</a>
+                                  <a class="nav-link" id="v-pills-lotte-tab1" data-bs-toggle="pill" data-bs-target="#v-pills-lotte6" type="button" role="tab" aria-controls="v-pills-lotte6" aria-selected="false">F</a>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent7">
+                                  <div class="tab-pane fade show active" id="v-pills-lotte1" role="tabpanel" aria-labelledby="v-pills-lotte-tab1">---aaa</div>
+                                  <div class="tab-pane fade" id="v-pills-lotte2" role="tabpanel" aria-labelledby="v-pills-lotte-tab2">---bbb</div>
+                                  <div class="tab-pane fade" id="v-pills-lotte3" role="tabpanel" aria-labelledby="v-pills-lotte-tab3">---ccc</div>
+                                  <div class="tab-pane fade" id="v-pills-lotte4" role="tabpanel" aria-labelledby="v-pills-lotte-tab4">---ddd</div>
+                                  <div class="tab-pane fade" id="v-pills-lotte5" role="tabpanel" aria-labelledby="v-pills-lotte-tab5">---eee</div>
+                                  <div class="tab-pane fade" id="v-pills-lotte6" role="tabpanel" aria-labelledby="v-pills-lotte-tab6">---fff</div>
+                                </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      
+                </div>
+            </section>
+            <section class="event">
+                <div class="wrapper-event-news">
+                    <div class="wrapper-event">
+                        <div class="event-title">
+                            <h2 class="title">
+                                ƯU ĐÃI
+                            </h2>                 
+                        </div>
+                        <div class="event-content">
+                            <div class="event-group">
+                                <div class="event-items">
+                                    <a href="#">
+                                        <div class="event-img">
+                                            <img src="./img/event-news/hssv.jpg" alt="">
+                                        </div>
+                                        
+                                    </a>
+                                </div>
+                                <div class="event-items">
+                                    <a href="#">
+                                        <div class="event-img">
+                                            <img src="./img/event-news/big-star-_-trang-chủ-web.jpg" alt="">
+                                        </div>
+                                        
+                                    </a>
+                                </div>
+                                <div class="event-items">
+                                    <a href="#">
+                                        <div class="event-img">
+                                            <img src="./img/event-news/c_monday.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="event-items">
+                                    <a href="#">
+                                        <div class="event-img">
+                                            <img src="./img/event-news/c_ten.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="event-items">
+                                    <a href="#">
+                                        <div class="event-img">
+                                            <img src="./img/event-news/c'member.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-news">
+                        <div class="news-title">
+                            <h3 class="title">tin tức</h3>
+                        </div>
+                        <div class="news-content">
+                            <!-- <div class="items-content"> -->
+                                <div class="items-left">
+                                    <div class="info">
+                                        <h4 class="title">[TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="items-right">
+                                    <div class="info">
+                                        <h4 class="title">[AINBO: NỮ CHIẾN BINH AMAZON] - Phim hoạt hình đầy màu sắc và giàu ý nghĩa mở đầu năm mới 2021</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/415x815.jpg" alt="">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="items-content"> -->
+                                <div class="items-right">
+                                    <div class="info">
+                                        <h4 class="title">[TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="items-left">
+                                    <div class="info">
+                                        <h4 class="title">[AINBO: NỮ CHIẾN BINH AMAZON] - Phim hoạt hình đầy màu sắc và giàu ý nghĩa mở đầu năm mới 2021</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="items-content"> -->
+                                <div class="items-left">
+                                    <div class="info">
+                                        <h4 class="title">[TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="items-right">
+                                    <div class="info">
+                                        <h4 class="title">[AINBO: NỮ CHIẾN BINH AMAZON] - Phim hoạt hình đầy màu sắc và giàu ý nghĩa mở đầu năm mới 2021</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/415x815.jpg" alt="">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="items-content"> -->
+                                <div class="items-right">
+                                    <div class="info">
+                                        <h4 class="title">[TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="items-left">
+                                    <div class="info">
+                                        <h4 class="title">[AINBO: NỮ CHIẾN BINH AMAZON] - Phim hoạt hình đầy màu sắc và giàu ý nghĩa mở đầu năm mới 2021</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="items-content"> -->
+                                <div class="items-left read-more">
+                                    <div class="info">
+                                        <h4 class="title">[TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/publicpreview--1-.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="items-right read-more">
+                                    <div class="info">
+                                        <h4 class="title">[AINBO: NỮ CHIẾN BINH AMAZON] - Phim hoạt hình đầy màu sắc và giàu ý nghĩa mở đầu năm mới 2021</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/415x815.jpg" alt="">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <div class="items-content read-more">
+                                <div class="items-center">
+                                    <div class="info">
+                                        <h4 class="title">[AINBO: NỮ CHIẾN BINH AMAZON] - Phim hoạt hình đầy màu sắc và giàu ý nghĩa mở đầu năm mới 2021</h4>
+                                        <p class="txt">
+                                            [TOM & JERRY: QUẬY TUNG NEW YORK] - Khi các nhân vật hoạt đóng chính trong những bộ phim live-action đình đám: Ai ấn tượng nhất?
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/event-news/415x815.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-read-more" id="btn-read-more">Xem thêm</button>
+                    </div>
+                </div>
+            </section>
+            <section class="app">
+                <div class="wrapper-app">
+                    <div class="row">
+                        <div class="col-6 left">
+                            <p class="textLeft">Ứng dụng tiện lợi dành cho</p>
+                            <p class="textLeft">người yêu điện ảnh</p>
+                            <br>
+                            <p class="textSmall">Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và đổi quà hấp dẫn.</p>
+                            <br>
+                            <button class="btnLeft">App miễn phí - Tải về ngay!</button>
+                            <p class="textBottom"> 
+                                TIX có hai phiên bản
+                                <a href="#">IOS</a>
+                                &
+                                <a href="#">Android</a>
+                            </p>
+                        </div>
+                        <div class="col-6 right">
+                            <img class="img-main" src="./img/app/mobile.png" alt="">
+                            <div class="sliderScreen">
+                                <div class="right-group">
+                                    <div class="right-items">
+                                        <img class="right-img" src="./img/app//slide16.jpg" alt="">
+                                    </div>
+                                    <div class="right-items">
+                                        <img class="right-img" src="./img/app/slide2.jpg" alt="">
+                                    </div>
+                                    <div class="right-items">
+                                        <img class="right-img" src="./img/app/slide3.jpg" alt="">
+                                    </div>
+                                    <div class="right-items">
+                                        <img class="right-img" src="./img/app/slide16.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <footer>
+                <div class="wrapper-footer">
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="title">TIX</p>
+                            <div class="row">
+                                <div class="col-6 info1">
+                                    <a href="#" style="padding-right: 10px;">FAQ</a>
+                                    <a href="#">Brand Guidelines</a>
+                                </div>
+                                <div class="col-6 info1">
+                                    <a href="#">Thỏa thuận sử dụng</a>
+                                    <a href="#">Chính sách bảo mật</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-4">
+                            <p class="title">ĐỐI TÁC</p>
+                            <div class="row">
+                                <div class="col-12 lineBottom">
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/cgv.png" style="background-color: white;" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/bhd.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/galaxycine.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/cinestar.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/404b8c4b80d77732e7426cdb7e24be20.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 lineBottom">
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/megags.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/bt.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/dongdacinema.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/TOUCH.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/cnx.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 lineBottom">
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/STARLIGHT.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/dcine.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/zalopay_icon.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/payoo.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/VCB.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 lineBottom">
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/AGRIBANK.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/VIETTINBANK.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/IVB.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/123go.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconConnect" src="./img/footer/laban.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <!-- <p class="title">TIX</p> -->
+                            <div class="row">
+                                <div class="col-6 textCenter">
+                                    <p class="title">MOBILE APP</p>
+                                    <a href="#">
+                                        <img class="iconApp" src="./img/footer/apple-logo.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconApp" src="./img/footer/android-logo.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6 textCenter">
+                                    <p class="title ">SOCIAL</p>
+                                    <a href="#">
+                                        <img class="iconApp" src="./img/footer/facebook-logo.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="iconApp" src="./img/footer/zalo-logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hrFooter">
+                    <div class="row">
+                        <div class="col-1 imgFooter">
+                            <img class="zion" src="./img/footer/zion-logo.jpg" alt="">
+                        </div>
+                        <div class="col-9 infoFooter">
+                            <span style="color: white; font-size: 16px;">TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
+                            <span>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</span>
+                            <span>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,<br>đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020  do Sở kế hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</span>
+                            <span>Số Điện Thoại (Hotline): 1900 545 436<br>Email: 
+                                <a href="#" style="color: #fb4226;">support@tix.vn</a>
+                            </span>
+                        </div>
+                        <div class="col-2 imgFooter">
+                            <img class="congThuong" src="./img/footer/d1e6bd560daa9e20131ea8a0f62e87f8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    
+    <script src="./js/read-more.js" ></script>
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="/js/slick.min.js"></script>
+
+    <script src="./js/owl.carousel.min.js"></script>
+
+        <script>
+
+        $(".carousel-group").slick({
+            dots: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 1000,
+        });
+
+        $('.list-soon').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        dots: true
+        });
+
+        $('.list-showing').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        infinite: true,
+        dots: true  
+        });
+
+        $('.event-group').slick({
+            dots: true,
+            slidesToShow: 3,
+            arrows: false,
+           // autoplay: true,
+           // autoplaySpeed: 3000,
+        });
+
+        $('.app-group').slick({
+            dots: false,
+            slidesToShow: 4,
+            arrows: false,
+            // autoplay: true,
+            //autoplaySpeed: 3000,
+        });
+
+        $('.right-group').slick({
+            dots: false,
+            slidesToShow: 1,
+            arrows: false,
+          //   autoplay: true,
+           // autoplaySpeed: 2000,
+        });
+
+        </script>
+
+    </body> 
+
+    </html>

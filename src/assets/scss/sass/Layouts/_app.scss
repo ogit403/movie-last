@@ -1,0 +1,210 @@
+.app {
+    font-family: 'Quicksand', sans-serif;
+    padding: 120px 0 80px 0;
+    background-image: url(../../../../assets/img/app/backapp.jpg);
+    background-size: contain;
+    .wrapper-app {
+        max-width: 940px;
+        margin: auto;
+        float: none;
+        clear: both;
+
+        .row {
+            .left {
+                padding: 60px 15px 0 15px;
+                .textLeft {
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+                .textSmall {
+                    color: #fff;
+                    font-size: 16px;
+                }
+                .btnLeft {
+                    background-color: #fb4226;
+                    padding: 10px 20px;
+                    color: #fff;
+                    font-size: medium;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 4px;
+                }
+                .textBottom {
+                    color: #fff;
+                     padding-top: 10px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+
+            .right {
+                position: relative;
+                padding: 0;
+                
+                .img-main {
+                    width: 485px;
+                    padding: 0 28%;
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .sliderScreen {
+                    position: absolute;
+                    padding: 1.5% 29.3% 0 29.3%;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    
+                    .slick-list {
+                        border-radius: 20px;
+                        position: relative;
+                        display: block;
+                        overflow: hidden;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .right-group {
+                        .right-items {
+                            width: 195px;   
+                                  
+                            .right-img {
+                                width: 100%;
+                            }
+                            &:focus {
+                                outline: none !important;
+                                border: none !important;
+                                box-shadow: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .app {
+        .left {
+            text-align: center;
+            .textLeft {
+                color: #fff;
+                font-weight: 700;
+                font-size: 30px;
+            }
+            .textSmall {
+                color: #fff;
+                font-size: 16px;
+            }
+            .btnLeft {
+                background-color: #fb4226;
+                padding: 10px 20px;
+                color: #fff;
+                font-size: medium;
+                font-weight: 700;
+                border: none;
+                border-radius: 4px;
+            }
+            .textBottom {
+                color: #fff;
+                 padding-top: 10px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+        .right {
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .app {
+        padding-top: 0px;
+        .left {
+            .textLeft {
+                color: #fff;
+                font-weight: 700;
+                font-size: 30px;
+            }
+            .textSmall {
+                color: #fff;
+                font-size: 16px;
+            }
+            .btnLeft {
+                background-color: #fb4226;
+                padding: 10px 20px;
+                color: #fff;
+                font-size: medium;
+                font-weight: 700;
+                border: none;
+                border-radius: 4px;
+            }
+            .textBottom {
+                color: #fff;
+                 padding-top: 10px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .app {
+        padding-top: 0px;
+        .left {
+            .textLeft {
+                font-size: 24px !important;
+            }
+            .textSmall {
+                font-size: 14px !important;
+            }
+            .btnLeft {
+                font-size: 14px !important;
+            }
+            .textBottom {
+                a {
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .app {
+        padding-top: 0px;
+        padding-bottom: 20px;
+        .left {
+            .textLeft {
+                font-size: 20px !important;
+            }
+            .textSmall {
+                font-size: 12px !important;
+            }
+            .btnLeft {
+                font-size: 12px !important;
+            }
+            .textBottom {
+                font-size: 10px !important;
+                a {
+                    font-size: 10px !important;
+                }
+            }
+        }
+    }
+}

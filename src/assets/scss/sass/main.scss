@@ -1,0 +1,47 @@
+//không chứa code css, chỉ chứa đường dẫn tới các file con
+
+//Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+
+//Vendor
+
+//Base
+@import './Base/reset';
+@import './Base/customize';
+
+//Components
+@import './Components/button';
+
+//Layout
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/book';
+@import './Layouts/list';
+@import './Layouts/theater';
+@import './Layouts/event-news';
+@import './Layouts/app';
+@import './Layouts/footer';
+
+//Page
+
+//Home
+@import './Page/Home/list-movie';
+@import './Page/Home/detail';
+@import './Page/Home/detail-cinema';
+@import './Page/Home/buy';
+@import './Page/Home/events';
+@import './Page/Home/listdate';
+@import './Page/Home/review';
+@import './Page/Home/login';
+@import './Page/Home/detail-events';
+
+//Admin
+@import './Page/Admin/add-movie';
+@import './Page/Admin/add-user';
+@import './Page/Admin/info-user';
+@import './Page/Admin/movie';
+@import './Page/Admin/user';
+@import './Page/Admin/navbar-admin';
+
+// Theme

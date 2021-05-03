@@ -1,0 +1,1020 @@
+.buy{
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    .wrapper-buy {
+        position: relative;
+        .main-left {
+            margin-right: 450px;
+            position: relative;
+            height: 100%;
+            .header {
+                position: relative;
+                width: 100%;
+                left: 0;
+                z-index: 7;
+                background: #FFF;
+                box-shadow: 1px 1px 20px #847b7b;
+                .header-content {
+                    margin: 0 5%;
+                    position: relative;
+                    .logo {
+                        overflow: hidden;
+                        h1 {
+                            margin: 10px 0;
+                            a {
+                                img {
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                    .menu {
+                        position: absolute;
+                        left: 100px;
+                        top: 0;
+                        .nav {
+                            list-style: none;
+                        }
+                        .nav-back {
+                            display: inline-block;
+                            li {
+                                display: block;
+                                 position: relative;
+                                a {
+                                    padding: 30px 25px;
+                                    font-size: 16px;
+                                    color: #aaa;
+                                    position: relative;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                        color: #99278f;
+                                    }
+                                }
+                            }
+                        }
+                        .nav-step {
+                            display: inline-block;
+                            font-size: 0px;
+                            .nav-item {
+                                display: inline-block;
+                                position: relative;
+                                margin-right: 0px;
+                               
+                                .nav-link {
+                                    border-radius: 0;
+                                    background-color: transparent;
+                                    font-weight: 700;
+                                    text-decoration: none;
+                                    padding: 30px 25px;
+                                    padding-bottom: 21px;
+                                    font-size: 16px;
+                                    color: #aaa;
+                                    position: relative;
+                                    transition: all 0s;
+
+                                    &:hover {
+                                        color: #99278f;
+                                    border-bottom: 5px solid #99278f;
+                                    }
+                                }
+                                
+                            }
+                            .nav-item {
+                                .nav-link.active {
+                                    color: #99278f;
+                                    border-bottom: 5px solid #99278f;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .buy-content {
+                overflow: hidden;
+                height: 800px;
+                background-color: white;
+                .contentBuy {
+                    margin: 20px 5% 0;
+                    .wrap-buy {
+                        .note-time {
+                            position: relative;
+                            .note {
+                                
+                                padding: 15px 0;
+                                font-weight: 700;
+                                color: #000;
+                            }
+                        }
+                        .ticket {
+                            position: relative;
+                            font-size: 30px;
+                            img {
+                                position: absolute;
+                                top: 5px;
+                                width: 40px;
+                                vertical-align: middle;
+                                display: inline-block;
+                            }
+                            .name {
+                                margin-left: 50px;
+                                color: #000;
+                                font-weight: 700;
+                                .id {
+                                    color: #eb1689;
+                                    letter-spacing: 5px;
+                                }
+                            }
+                        }   
+                        .infoBuy, .info-ticket {
+                            .left, .right {
+                                .title {
+                                    color: #2d2d2d;
+                                    margin-top: 0;
+                                    padding: 10px 0;
+                                    border-bottom: 1px dashed;
+                                }   
+                                .info {
+                                    .main {
+                                        margin-bottom: 5px;
+                                        font-size: 16px;
+                                        span {
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                                .info-combo {
+                                    .info-1 {
+                                        display: block;
+                                        margin-bottom: 0;
+                                        .name {
+                                            color: #000;
+                                            font-weight: 700;
+                                            display: inline-block;
+                                        }
+                                        .pull-right {
+                                            float: right;
+                                        }
+                                    }
+                                    .info-2 {
+                                        margin-bottom: 5px;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+ 
+                        }
+                        
+                        .seat {
+                            .seat-left {
+                                margin-top: 20px;
+                                .note {
+                                    // display: flex;
+                                    .range-center {
+                                        margin-top: 20px;
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        margin-right: 10px;
+                                        span {
+                                            border-bottom: 2px dashed #fa7f6c;
+                                            margin-right: 8px;
+                                            vertical-align: middle;
+                                            width: 28px;
+                                            display: inline-block;
+                                        }
+                                    }
+                                    .range-nice {
+                                        margin-top: 20px;
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        span {
+                                            border-bottom: 2px solid #fc4226;
+                                            margin-right: 8px;
+                                            vertical-align: middle;
+                                            width: 28px;
+                                            display: inline-block;
+                                            margin-right: 5px;
+                                        }
+                                        
+                                    }
+                                    .seat {
+                                    
+                                        font-size: 13px;
+                                        display: inline-block;
+                                        margin-bottom: 20px;
+                                        margin-right: 10px;
+                                        span {
+                                            height: 25px;
+                                            width: 25px;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                    .normal {
+                                        span {
+                                            background-color: #3e515d;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    .vip {
+                                        span {
+                                            background-color: #f7b500;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    .couple {
+                                        span {
+                                            background-color: #b03550;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    .booking {
+                                        span {
+                                            background-color: #44c020;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    .booked {
+                                        span {
+                                            background-color: #eceef0;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    .not {
+                                        span {
+                                            background-color: #cfd3d7;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                            .seat-right {
+                                .screen {
+                                    .namescreen {
+                                        text-align: center;
+                                        img {
+                                            width: 600px;
+                                        }
+                                    }
+                                }
+
+                                .exit {
+                                    display: block;
+                                    width: 100%;
+                                    overflow: auto;
+                                    margin-bottom: 20px;
+                                    .go {
+                                        font-size: 14px;
+                                        display: inline-block;
+                                    }
+                                    .out {
+                                        font-size: 14px;
+                                        float: right;
+                                        
+                                    }
+
+                                }
+
+                                .seat-full {
+                                    clear: both;
+                                    border-left: 3px solid #847b7b;
+                                    border-bottom: 3px solid #847b7b;
+                                    border-right: 3px solid #847b7b;
+                                    border-top: none;
+                                    border-radius: 5px;
+                                    // position: relative;
+                                    width: 600px;
+                                    margin: auto;
+                                    .seat-center {
+                                        position: absolute;
+                                        top: 60%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        z-index: 1;
+                                    }
+
+                                    .seat-number {  
+                                        cursor: pointer;
+                                        border-radius: 20px;
+                                        border: 2px solid #090141;
+                                        padding: 0 3px;
+                                        font-size: 14px;
+                                        margin-right: 10px;
+                                        display: inline-block;
+                                        margin-left: 2px;
+                                        margin-bottom: 7px;
+                                        transition: all 0.4s;
+                                        z-index: 2;
+                                    }
+                                    .first {
+                                        margin-left: 17px;
+                                    }
+                                    .seat-number.left {
+                                        margin-right: 30px;
+                                    }
+                                    .seat-number.couple {
+                                        padding: 0 26px;
+                                    }
+                                    .select-normal {
+                                        background-color: #3e515d;
+                                    }
+                                    .select-vip {
+                                        background-color: #f7b500;
+                                    }
+                                    .seat-number.normal {
+                                            border: 2px solid #3e515d;
+                                        
+                                        &:hover {
+                                            background-color: #3e515d;
+                                        }
+                                        
+                                    }
+                                    .seat-number.vip {
+                                            border: 2px solid #f7b500;
+                                            
+                                            &:hover {
+                                                background-color: #f7b500;
+                                            }
+                                        
+                                    }
+                                    .seat-number.booked {
+                                        background-color: #eceef0;
+                                        border: 2px solid #eceef0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .combo-popup-2 {
+            background-color: white;
+            position: absolute;
+            top: 250px;
+            left: 0;
+            width: 100%;
+            // display: none;
+            padding: 50px 10px 10px 10px;
+            padding-top: 10px;
+            box-shadow: 1px 1px 20px #847b7b;
+            transition: all 1s;
+            z-index: 10;
+            
+            .title {
+                font-weight: 700;
+                padding-left: 20px;
+            }
+            .combo-items {
+                position: relative;
+                border-top: 1px dashed #e9e9e9;
+                border-left: none;
+                border-right: none;
+                padding: 10px;
+                height: 100%;
+                margin-bottom: 15px;
+                padding-left: 5px;
+
+                .image {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                    border: 1px solid #f7a1cb;
+                    background-repeat: no-repeat;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 10px;
+                    background-image: url('../../../../img/buy/l-poster.png');
+                }
+                .combo-info {
+                    position: absolute;
+                    top: 8px;
+                    left: 75px;
+                    .name {
+                        color: #000;
+                        font-weight: 500;
+                    }
+                    p {
+                        color: #999;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                        font-size: 14px;
+                    }
+                    .money {
+                        color: #44c020;
+                        font-weight: 500;
+                    }
+                }
+                .info-count {
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                    display: flex-end;
+                    // align-items: end;
+                    
+                    button {
+                        transform: scale(3);
+                        font-size: 13px;
+                        font-weight: 700;
+                        border: none;
+                        background: transparent;
+                        &:focus {
+                            outline: none !important
+                            ;
+                        }
+                    }
+                    .in {
+                        color: #000;
+                        margin-right: 
+                        5px;
+                    }
+                    .de {
+                        margin-left: 5px;
+                        color: #e82327;
+                        transform: scale(2);
+                    }
+                    span {
+                        width: 29px;
+                        text-align: center;
+                        display: inline-block;
+                        font-weight: 700;
+                        border-radius: 3px;
+                        border: 1px solid #ccc;
+                        color: #000;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .trans-combo {
+            transform: translateX(450px);
+        }
+
+        .hide-combo {
+            display: none !important;
+        }
+
+        .show-combo {
+            display: block ;
+        }
+
+
+        .combo-popup {
+            position: absolute;
+            top: 0;
+            right: 450px;
+            background-color: white;
+            padding-top: 50px;
+            width: 450px;
+            padding: 50px 10px 10px 10px;
+            box-shadow: 1px 1px 20px #847b7b;
+            transition: all 1s;
+            // transform: translateX(0);
+            .title {
+                font-weight: 700;
+            }
+            .combo-items {
+                position: relative;
+                border-top: 1px dashed #e9e9e9;
+                border-left: none;
+                border-right: none;
+                padding: 10px;
+                height: 100%;
+                margin-bottom: 15px;
+                padding-left: 5px;
+
+                .image {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                    border: 1px solid #f7a1cb;
+                    background-repeat: no-repeat;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 10px;
+                    background-image: url('../../../../img/buy/l-poster.png');
+                }
+                .combo-info {
+                    position: absolute;
+                    top: 8px;
+                    left: 75px;
+                    .name {
+                        color: #000;
+                        font-weight: 500;
+                    }
+                    p {
+                        color: #999;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                        font-size: 14px;
+                    }
+                    .money {
+                        color: #44c020;
+                        font-weight: 500;
+                    }
+                }
+                .info-count {
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                    display: flex-end;
+                    // align-items: end;
+                    
+                    button {
+                        transform: scale(3);
+                        font-size: 13px;
+                        font-weight: 700;
+                        border: none;
+                        background: transparent;
+                        &:focus {
+                            outline: none !important
+                            ;
+                        }
+                    }
+                    .in {
+                        color: #000;
+                        margin-right: 
+                        5px;
+                    }
+                    .de {
+                        margin-left: 5px;
+                        color: #e82327;
+                        transform: scale(2);
+                    }
+                    span {
+                        width: 29px;
+                        text-align: center;
+                        display: inline-block;
+                        font-weight: 700;
+                        border-radius: 3px;
+                        border: 1px solid #ccc;
+                        color: #000;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .main-right {
+            //position: fixed;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 450px;
+            z-index: 9;
+            background: #FFF;
+            box-shadow: 1px 1px 20px #847b7b;
+            .main-right-content {
+                position: relative;
+                height: 100%;
+                .main-full {
+                    height: calc(100% - 90px);
+                    padding: 25px 25px 0;
+                    .member {
+                        overflow: auto;
+                        .avatar {
+                            width: 60px;
+                            float: left;
+                            border-radius: 30px;
+                            overflow: hidden;   
+                            img {
+                                max-width: 100%;
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                        .info {
+                            width: calc(100% - 80px);
+                            margin-left: 20px;
+                            float: left;
+                            color: #000;
+                            font-weight: 700;
+                            line-height: 100%;
+                            
+                            padding-top: 6px;
+                            p {
+                                
+                                font-size: 16px;
+                                color: #ea0a85;
+                            }
+                            .name {
+                                color: #000;
+                                font-size: 18px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        
+                    }
+                    .member-1 {
+                        overflow: auto;
+                        .avatar {
+                            width: 60px;
+                            float: left;
+                            border-radius: 30px;
+                            overflow: hidden;   
+                            img {
+                                max-width: 100%;
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                        .info {
+                            width: calc(100% - 80px);
+                            margin-left: 20px;
+                            float: left;
+                            color: #000;
+                            font-weight: 700;
+                            line-height: 100%;
+                            
+                            padding-top: 6px;
+                            p {
+                                
+                                font-size: 16px;
+                                color: #000;
+                            }
+                            .name {
+                                color: #000;
+                                font-size: 18px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        
+                    }
+                    .price-total {
+                        text-align: right;
+                        padding-right: 25px;
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: #ed4497;
+                        border-bottom: 2px solid #000;
+                        line-height: 30px;
+                    }
+                    .showtimes-detail {
+                        padding: 5px 0;
+                        line-height: 24px;
+                        border-bottom: 2px solid #000;
+                        color: #000;
+                        .movie-name {
+                            font-weight: 700;
+                        }
+                    }
+                    .current-select {
+                        .select {
+                            border-bottom: 2px solid #09232e;
+                            padding: 5px 0;
+                            line-height: 24px;
+                            display: block;
+                            .seat-code {
+                                display: inline-block;
+                            }
+                            .price {
+                                float: right;
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: #ed4497;
+                                .totalPrice {
+                                    display: inline-block;
+                                }
+                            }
+                            .price-1 {
+                                float: right;
+                                font-size: 30px;
+                                font-weight: 600;
+                                color: #ed4497;
+                                .totalPrice-1 {
+                                    display: inline-block;
+                                }
+                            }
+
+                            a {
+                                color: #ea0c85;
+                                text-decoration: none;
+                                font-weight: 600;
+
+                            }
+
+                        }
+                        .seats {
+                            color: #ed1e24;
+                        }
+                        .combo {
+                            button {
+                                border: none;
+                                background-color: transparent;
+                                color: #ea0c85;
+                                font-weight: 600;
+                                &:focus {
+                                    outline: none !important;
+                                }
+                            }
+                        }
+                        .total {
+                            color: #000;
+                        }
+                        .combo-1 {
+                            color: #000;
+                        }
+                        
+                    }
+
+                    .current-select-1 {
+                        margin-top: 30px;
+                        .select {
+                            border-bottom: 2px solid #09232e;
+                            padding: 5px 0;
+                            line-height: 24px;
+                            display: block;
+                            .seat-code {
+                                display: inline-block;
+                            }
+                            .price {
+                                float: right;
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: #ed4497;
+                                .totalPrice {
+                                    display: inline-block;
+                                }
+                            }
+                            .price-1 {
+                                float: right;
+                                font-size: 30px;
+                                font-weight: 600;
+                                color: #ed4497;
+                                .totalPrice-1 {
+                                    display: inline-block;
+                                }
+                            }
+
+                            a {
+                                color: #ea0c85;
+                                text-decoration: none;
+                                font-weight: 600;
+
+                            }
+
+                        }
+                        .seats {
+                            color: #ed1e24;
+                        }
+                        .combo {
+                            // text-decoration: none;
+                            
+                        }
+                        .total {
+                            color: #000;
+                        }
+                        .combo-1 {
+                            color: #000;
+                        }
+                        
+                    }
+
+                    .pay {
+                        margin-top: 10px;
+                        color: #000;
+                            font-size: 17px;
+                            font-weight: 700;   
+                        .title {
+                            color: #000;
+                            font-size: 17px;
+                            font-weight: 700;
+                        }
+                        .form-check {
+                            input {
+                                margin-left: -18px;
+                            }
+                            label {
+                                margin-left: 5px;
+                                font-size: 15px;
+                            }
+                        }
+
+                    }
+
+                    .login {
+                        .title {
+                            margin-top: 20px;
+                            margin-right: -25px;
+                            margin-left: -25px;
+                            a {
+                                display: block;
+                                padding: 10px;
+                                text-align: center;
+                                background: #ed4497;
+                                color: #FFF;
+                                font-weight: 700;
+                                text-decoration: none;
+                            }
+                        }
+                        .select {
+                            border-bottom: 2px solid #09232e;
+                            padding: 5px 0;
+                            line-height: 24px;
+                            span {
+                                font-weight: 700;
+                            }
+                            
+                        }
+                        .warn {
+                            color: #ed4497;
+                            margin-top: 20px;
+                            display: inline-block;
+                            text-decoration: none;
+                        }
+                    }
+                    .payment {
+                        margin-top: 10px;
+                        
+                        .first {
+                            margin: 0 0 11px;
+                            b {
+                                font-weight: 700;
+                            }
+                        }
+                         p {
+                            margin: 0 0 11px;
+                         }
+                    }
+                    .btn-booking {
+                        display: block;
+                        padding: 15px 0;
+                        background-color: #cdcccc;
+                        color: #FFF;
+                        box-shadow: none;
+                        width: 100%;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        height: 70px;
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 26px;
+                        text-decoration: none;
+                    }
+                    .btn-booking.active {
+                        background-color: #99278f;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.buySuccess {
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    background-color: #081B27;
+    z-index: 0;
+    color: white;
+    .row {
+        div {
+            margin-bottom: 10px;
+            .title {
+                display: inline-block;
+                width: 160px;
+                font-size: 15px;
+            }
+            .info {
+                font-size: 18px;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 1101px) {
+    .combo-popup-2 {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .buy {
+        .combo-popup {
+            display: none;
+        }
+        .main-right {
+            position: initial !important;
+            width: 100% !important;
+            height: 700px !important;
+        }
+        .main-left {
+            margin-right: 0 !important;
+        }
+        .buy-content {
+            height: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    .buy {
+        .range-center, .range-nice {
+            margin-top: 0 !important;
+        }
+        .scroll-seat {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            min-width: 100%;
+            .seat-right{
+                width: 200%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .buy {
+        .combo-popup-2 {
+            .title {
+                font-weight: 700;
+                padding-left: 20px;
+            }
+            .combo-items {
+                .image {
+                }
+                .combo-info {
+                    position: absolute;
+                    top: 8px;
+                    left: 75px;
+                    .name {
+                        color: #000;
+                        font-weight: 500;
+                    }
+                    p {
+                        color: #999;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                        font-size: 10px !important;
+                    }
+                    .money {
+                        color: #44c020;
+                        font-weight: 500;
+                    }
+                }
+                .info-count {
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                    display: flex-end;
+                    // align-items: end;
+                    
+                    button {
+                        transform: scale(3);
+                        font-size: 13px;
+                        font-weight: 700;
+                        border: none;
+                        background: transparent;
+                        &:focus {
+                            outline: none !important
+                            ;
+                        }
+                    }
+                    .in {
+                        color: #000;
+                        margin-right: 
+                        5px;
+                    }
+                    .de {
+                        margin-left: 5px;
+                        color: #e82327;
+                        transform: scale(2);
+                    }
+                    span {
+                        width: 29px;
+                        text-align: center;
+                        display: inline-block;
+                        font-weight: 700;
+                        border-radius: 3px;
+                        border: 1px solid #ccc;
+                        color: #000;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.combo-popup-2 {
+    display: none;
+}

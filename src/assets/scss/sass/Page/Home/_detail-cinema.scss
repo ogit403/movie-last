@@ -1,0 +1,839 @@
+.detailCinema {
+    font-family: "Quicksand", sans-serif;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+    background-color: #fff;
+    .wrap-image {
+        .bg-cinema {
+            padding: 0;
+            position: absolute;
+            top: 0;
+            filter: blur(15px);
+            height: 600px;
+        }
+        .blockWhite {
+            top: 0;
+            left: 0;
+            height: 801px!important;
+            width: 100%;
+            position: absolute;
+            background: linear-gradient(to top,#fff,transparent 100%)
+        }
+    }
+    
+    .wrapper-detail {
+        position: relative;
+        padding-top: 13%;
+        .detail {  
+            margin-top: -190px;
+            margin-left: 20px;
+            position: relative;
+            .detail-img {
+                margin-top: 110px;
+                margin-left: 100px;
+                max-width: 220px;
+                img {
+                    width: 100%;
+                    border-radius: 5px;
+                    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+                }
+            }
+            .detail-info {
+                position: absolute;
+                top: -50px;
+                left: 30px;
+                margin-left: 320px;
+
+                .info-title {
+                    text-decoration: none;
+                    transition: all 0.3s;
+                    h1 {
+                        margin: 50px 0;
+                        margin-top: 60px;
+                        margin-bottom: 10px;
+                        color: #ea3b92;
+                        font-size: 28px;
+                        text-transform: none;
+                        text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                    &:hover {
+                        color: #f29438;
+                    }
+                }
+
+                .info {
+                    display: block;
+                    color: #333;
+                    font-weight: 700;
+                    .title {
+                        display: inline-block;
+                        width: 110px;
+                        color: white;
+                    }
+                    .type {
+                        color: #f29438;
+                    }
+                }
+                .info.actor {
+                    padding-right: 190px;
+                }
+            }
+            .button-info {
+                text-decoration: none;
+                color: white;
+                background-color: #ea3b92;
+                text-transform: uppercase;
+                border: 1px solid #ea3b92;
+                padding: 5px 30px 5px 10px;
+                display: inline-block;
+                font-weight: 600;
+                font-size: 24px;
+                box-shadow: 2px 3px 0 #868686;
+                margin-top: 25px;
+                img {
+                    width: 30px;
+                }
+
+                &:hover {
+                    background: #f756a7;
+                    border-color: #f756a7;
+                    text-decoration: none;
+                }
+            }
+            .wrap-rate {
+                float: right;
+                position: absolute;
+                top: 50px;
+                right: 30px;    
+                text-align: center;
+                .circleStar {
+                
+                    .circlePercent {
+                        position: relative;
+                        font-size: 126px;
+                        width: 1em;
+                        height: 1em;
+                        border-radius: 50%;
+                        margin: auto;
+                        background-color: rgba(0,0,0,.4);
+    
+                        &:after {
+                            position: absolute;
+                            top: .06em;
+                            left: .06em;
+                            display: block;
+                            content: " ";
+                            border-radius: 50%;
+                            background-color: transparent;
+                            opacity: .6;
+                            width: .88em;
+                            height: .88em;
+                            transition-property: all;
+                            transition-duration: .2s;
+                            transition-timing-function: ease-out;
+    
+                        }
+    
+                        .circleBorder {
+                            width: 126px;
+                            height: 126px;
+                            background: 0 0;
+                            border: 7.5px solid #3a3a3a;
+                            border-radius: 50%;
+                            position: absolute;
+                        }
+                        .score {
+                            position: absolute;
+                            width: 100%;
+                            z-index: 1;
+                            left: 0;
+                            top: 0;
+                            line-height: 2.4em;
+                            font-size: .42em;
+                            color: #fff;
+                            display: block;
+                            text-align: center;
+                            white-space: nowrap;
+                            transition-property: all;
+                            transition-duration: .2s;
+                            transition-timing-function: ease-out;
+                        }
+                        .slice {
+                            position: absolute;
+                            width: 1em;
+                            height: 1em;
+                            .bar {
+                                position: absolute;
+                                border: .06em solid #7ed321;
+                                width: 1em;
+                                height: 1em;
+                                clip: rect(0,.5em,1em,0);
+                                border-radius: 50%;
+                            }
+                            .fill {
+                                transform: rotate(180deg);
+                                position: absolute;
+                                border: .06em solid #7ed321;
+                                width: 1em;
+                                height: 1em;
+                                clip: rect(0,.5em,1em,0);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+                .starMain {
+                    margin-top: 5px;
+                    display: block;
+                }
+                .count {
+                    margin-top: 5px;
+                    display: block;
+                    color: #000;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }
+            
+        }
+
+
+
+
+        .showtime {
+            margin-top: 90px;
+            position: relative;
+            margin-bottom: 90px;
+            .wrapper-showtime {
+                .showtime-title {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    .nav-item {
+                        display: inline-block;
+                        .nav-link {
+                            background-color: transparent;
+                            color: #333;
+                            font-size: 22px;
+                            font-weight: 700;
+                            text-decoration: none;
+                            transition: all 0.3s;
+                            &:hover {
+                                font-size: 24px;
+                            }
+                        }
+                        .nav-link.active {
+                            text-decoration: underline;
+                            color: #f29438;
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .showtime-content {
+                    max-width: 870px;
+                    margin: 0 auto;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 40px;
+
+                    
+
+                    .showtime-full {
+                       overflow: auto;
+                       .showing {
+                           display: block;
+                       }
+                        .listCinemas {
+                            width: 35%;
+                            float: left;
+                            background-color: #fff;
+                            min-height: 713px;
+                            border-top: 1px solid #f29438;
+                            border-bottom: 1px solid #f29438;
+                            border-left: 1px solid #f29438;
+                            border-top-left-radius: 4px;
+                            border-bottom-left-radius: 4px;
+
+                            .cinemas {
+                                .items {
+                                    color: #000;
+                                    opacity: 0.5;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    background-color: transparent;
+                                    text-decoration: none;
+                                    transition: all 0.3s;
+                                    position: relative;
+                                    padding: 20px;
+
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 50%;
+                                        width: calc(100% - 40px);
+                                        transform: translateX(-50%);
+                                        border-bottom: 1px solid #ccc;
+                                        border-color: rgba(238,238,238,.88);
+                                        
+                                    }
+
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                        float: left;
+                                    }
+                                    .info {
+                                        width: 100%;
+                                        padding-left: 65px;
+                                        padding-top: 6px;
+                                         font-size: 0px;
+                                    }
+                                    .title {
+                                        display: inline-block;
+                                        font-size: 14px;
+                                        color: #000;
+                                        font-weight: 600;
+                                        margin-bottom: 0;
+                                    }
+                                    .address {
+                                        font-size: 12px;
+                                        color: #737576;
+                                        margin-bottom: 0;
+                                    }
+                                    span {
+                                        margin-left: 10px;
+                                    }
+                                }
+                                .items.active {
+                                    color: #000;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        .listDayOfWeek {
+                            min-height: 713px;
+                            background-color: #fff; 
+                            width: 65%;
+                            float: left;
+                            border: 1px solid #f29438;
+                            border-top-right-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                            background-color: #fff;
+
+                            .scrollbar {
+                                overflow-x: scroll;
+                                overflow-y: hidden;
+                                min-width: 100%;
+                            }
+
+                            .dayOfWeek {
+                                height: 90px;
+                                padding: 16px!important;
+                                padding-left: 0!important;
+                                padding-right: 0!important;
+                                background-color: #fff;
+                                
+                                
+
+                                .wrapDayOfWeek {
+                                    display: inline-flex;
+                                    width: 200%;
+                                    .listDay {
+                                        padding-top: 0;
+                                        cursor: pointer;
+                                        width: 8%;
+                                        display: inline-block;
+                                        text-align: center;
+                                        color: #000;
+                                        float: left;
+                                        background-color: transparent;
+                                        font-weight: 700;
+
+                                        p {
+                                            margin-bottom: 0 !important;
+                                        }
+
+                                        .date {
+                                            padding-top: 9px;
+                                            font-size: 14px;
+                                            margin-bottom: 0 !important;
+                                            white-space: nowrap;
+                                        }
+                                        .number {
+                                            font-size: 18px;
+                                            margin-bottom: 0 !important;
+                                        }
+                                    }
+                                    .listDay.active {
+                                        color: #fb4226;
+                                    }
+                                }
+                            }
+
+                            .blockContent {
+                                padding-left: 20px;
+                                .wrapContent {
+                                    .contents {
+                                        .scrollbar {
+                                            overflow-y: scroll;
+                                            max-height: 621px;
+                                            overflow-x: hidden;
+                                        }
+                                        .items-movie {
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;
+                                            img {
+                                                width: 50px;
+                                                height: 50px;
+                                                float: left;
+                                                object-fit: cover;
+                                            }
+                                            .movie-info {
+                                                width: 100%;
+                                                padding-left: 65px;
+                                                padding-top: 6px;
+                                                font-size: 0px;
+                                                .title-1 {
+                                                    margin-bottom: 0;  
+                                                    .type {
+                                                        color: #000;
+                                                        font-size: 16px;
+                                                        font-weight: 600;
+                                                        
+                                                        .left {
+                                                            color: #fff;
+                                                            background-color: #fb4226;
+                                                            border-radius: 5px;
+                                                            font-size: 15px;
+                                                            padding: 2px 5px;
+                                                        }
+                                                    }
+                        
+                                                    
+                                                }
+                                                .title-2 {
+                                                    margin: 0;
+                                                    word-spacing: 1px;
+                                                    font-size: 13px;
+                                                    color: #9b9b9b;
+                                                    font-weight: 600;
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                        .info-items {
+                                            // clear: both;
+                                            overflow: auto;
+                                            // float: left;
+                                            width: 100%;
+                                            padding-top: 15px;
+                                            .type {
+                                                // float: left;
+                                                width: 100%;
+                                                font-size: 16px;
+                                                color: #000;
+                                                font-weight: 700;
+                                                margin-bottom: 5px;
+                                            }
+                                            .time {
+                                                cursor: pointer;
+                                                .watch {
+                                                    width: calc(25% - 10px);
+                                                     float: left;
+                                                    
+                    
+                                                    // display: inline-block;
+                                                    font-size: 14px;
+                                                    font-weight: 600;
+                                                    margin: 0 10px 10px 0;
+                                                    padding: 5px 0;
+                                                    transition: all .2s;
+                                                    text-decoration: none;
+                                                    display: block;
+                                                    text-align: center;
+                                                    background-color: transparent;  
+                                                    border-radius: 7px;
+                                                    color: #9b9b9b;
+                                                    border: 1px solid #e4e4e4;
+                                                    
+                                                    span {
+                                                        font-size: 18px;
+                                                        font-weight: 500;
+                                                        color: #108f3e;
+                                                        
+                                                    }
+                        
+                                                    &:hover {  
+                                                        .watch-1 {
+                        
+                                                            color: #8623a8;
+                                                        }                           
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }   
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    .showContent {
+                        
+                        .wrapper-showing {
+                            max-width: 810px;
+                            margin: auto;
+                            .detailMain {
+                                max-width: 580px;
+                                margin: 0 calc(50% - 290px);
+                                padding: 0;
+                                .main {
+                                    .btn-main {
+                                        border: none;
+                                    }
+                                    position: relative;
+                                    cursor: pointer;
+                                    background-color: white;
+                                    //padding: 10px;
+                                    border-radius: 5px;
+                                    .icon {
+                                        position: absolute;
+                                        top: 24%;
+                                        left: 3%;
+                                        img {
+                                            height: 36px;
+                                            width: 36px;
+                                            border-radius: 25px;
+                                        }
+                                    }
+                                    .inputMain {
+                                        cursor: pointer;
+                                        width: 100%;
+                                        border: none;
+                                        padding: 10px 10px 10px 55px;
+                                        height: 60px;
+                                        border-radius: 4px;
+                                        background: #fff;
+                                        color: #9b9b9b;
+                                        font-size: 14px;
+
+                                        &:focus {
+                                            outline: none !important;
+                                            border: none !important;
+                                        }
+                                    }
+                                    .star {
+                                        position: absolute;
+                                        top: 28%;
+                                        right: 3%;
+                                        img {
+                                            height: 24px;
+                                            width: auto;
+                                        }
+                                    }
+                                }
+                            }
+                            .listComment {
+                                
+                                .list-items {
+                                    border: 1px solid #e6e6e6;
+                                    border-bottom: none;
+                                    border-radius: 5px;
+                                    margin: 15px calc(50% - 290px) 0;
+                                    background-color: #fff;
+                                    max-width: 580px;
+                                    .wrapper {
+                                        position: relative;
+                                        // float: left;
+                                        width: 100%;
+                                        padding: 20px 20px 12px;
+                                        border-bottom: 1px solid #e6e6e6;
+                                        .info {
+                                            .reviewer {
+                                                position: relative;
+                                                float: left;
+                                                .image {
+                                                    position: relative;
+                                                    display: inline-block;
+                                                    .main {
+                                                        height: 32px;
+                                                        width: 32px;
+                                                        border-radius: 25px;
+                                                    }
+                                                    .fb {
+                                                        position: absolute;
+                                                        right: 0;
+                                                        top: 15px;
+                                                    }
+                                                }
+                                                .info {
+                                                    margin-left: 40px;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    color: #000;
+                                                    font-size: 0;
+                                                    .name {
+                                                        font-size: 14px;
+                                                        font-weight: 700;
+                                                        margin-bottom: 0;
+                                                    }
+                                                    .time {
+                                                        font-weight: 500;
+                                                        font-size: 10px;
+                                                        color: #9b9b9b;
+                                                        margin-bottom: 0;
+                                                    }
+                                                }   
+                                                
+                                            }
+                                            .star {
+                                                float: right;
+                                                display: inline-block;
+                                                .core {
+                                                    margin: auto;
+                                                    p {
+                                                        padding-right: 8px;
+                                                        text-align: right;
+                                                        color: #91d25a;
+                                                        font-size: 16px;
+                                                        margin-bottom: 0;
+                                                    }
+                                                }
+                                                .star {
+                                                    font-size: 0;
+                                                    img {
+                                                        max-width: 8px;
+                                                        height: auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .comment {
+                                            padding: 20px 0;
+                                            
+                                            margin-bottom: 0;
+                                            
+                                            p {
+                                                color: #4a4a4a!important;
+                                            font-size: 14px;
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                        .count-like {
+                                            .countMain {
+                                                display: inline-block;
+                                                cursor: pointer;
+
+                                                &:hover {
+                                                    img {
+                                                        transform: scale(1.2);
+                                                    }
+                                                }
+                                            }
+                                            padding-top: 15px;
+                                            border-top: 1px solid #e4e4e4;
+                                            color: #737576!important;
+                                            font-weight: 600;
+                                            
+
+                                            
+                                            img {
+                                                width: 16px;
+                                                transition: all 0.3s;
+                                                display: table-cell;
+                                                vertical-align: middle;
+                                                cursor: pointer;
+                                                display: inline-block;
+                                            }
+                                            .count {
+                                                padding: 0 3px;
+                                            }
+                                            .like {
+
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-comment {
+    .modal-dialog {
+        display: inline-table;
+        width: auto;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        overflow-x: hidden;
+       
+        .modal-content {
+            text-align: center;
+            position: relative;
+           
+            .iconClose {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 5px;
+            }
+            .score {
+                h2 {
+                    font-size: 40px;
+                    color: #7ed321 !important;
+                    text-align: center;
+                    clear: both;
+                    margin-top: 10px;
+                    margin-bottom: -15px;
+                    font-weight: 700;
+                }
+            }
+            .star {
+                
+                max-width: 162px;
+                height: auto;
+                margin: auto;
+                margin-top: 10px;
+                font-size: 0;
+                img {
+                    display: inline-block;
+                    width: 32px;
+                }
+            }
+            .comment {
+              
+                textarea {
+                    appearance: none;
+                    padding: 20px;
+                    margin: 20px;
+                    border-radius: 4px;
+                    width: 740px;
+                    border: 1px solid #e8e8e9;
+                    background: #fff;
+                    resize: none;
+                    font-size: 16px;
+                    transition: all 0.3s;
+                    overflow: auto;
+                    
+                    &:focus {
+                        border: 1px solid #fb4226;
+                        outline: none !important;
+                        
+                        box-shadow: inset 0 1px 1px rgba(251, 66, 38, 0.6), 0 0 8px rgba(251, 66, 38, 0.6);
+                    }
+                }
+            }
+            .btn-push {
+                
+                button {
+                    float: right;
+                    margin-right: 20px;
+                    margin-bottom: 25px;
+                    background-color: #fb4226;
+                    border: 1px solid #fb4226;
+                    padding: 5px 25px;
+                    border-radius: 5px;
+                    background-image: linear-gradient(-226deg,#fb4226 11%,#be2912 100%);
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+
+                    &:focus {
+                        outline: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse-border {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(1.5, 1.5, 1.5);
+    }
+}
+
+#style-2::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 15px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	height: 5px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 15px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #ccc;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 15px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 15px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #ccc;
+}

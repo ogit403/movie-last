@@ -1,0 +1,75 @@
+.login {
+    // position: relative;
+    .wrapper-login {
+        position: relative;
+        display: block;
+        text-align: center;
+        .form-group {
+            display: inline-block;
+            margin-top: 80px;
+            padding: 100px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+            // .form-login {
+            //     display: block;
+            //     // width: 240px;
+            //     // height: 100px;
+            //     .f-login {
+            //         display: inline-block;
+            //         font-size: 16px;
+            //         background-color: transparent;
+            //         color: #000;
+            //         border: none;
+            //         font-weight: 600;
+            //         transition: all 0.2s;
+
+            //         &:hover {
+            //             color: #f29438;
+            //         }
+
+            //         &:focus {
+            //             outline: none !important;
+            //         }
+            //     }
+            //     .f-login.active {
+            //         font-size: 20px;
+            //         color: #f29438;
+                    
+            //     }
+
+                
+            // }
+
+            form {
+                //input {
+                //    color: #000;
+                //    font-weight: 500;
+                //    &:focus {
+                //        outline: none !important;
+                //        box-shadow: none !important;
+                //        border: 1px solid #f29438;
+                //    }
+                //}
+            }
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .form-group {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 499px){
+    .form-group {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}

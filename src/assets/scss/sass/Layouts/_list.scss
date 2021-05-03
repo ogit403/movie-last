@@ -1,0 +1,500 @@
+
+.list {
+    font-family: 'Quicksand', sans-serif;
+    .wrapper-list {
+        position: relative;
+        padding: 130px 150px 0 150px;
+        &:before {
+            content: '';
+            background-image: url(../../../../assets/img/movie-details-bg.jpg);
+            background-position: top;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        } 
+
+        .list-title {
+
+            .now-showing {
+                
+                a {
+                    padding-bottom: 0;
+                }
+            }
+            .now-soon {
+                padding-right: 70px;
+                a {
+                    padding-top: 0;
+                }
+            }
+
+            .now-showing, .now-soon {
+                display: inline-block;
+                
+                li {
+                    padding-left: 0;
+                }
+
+                a.active {
+                    font-size: 30px;
+                    background-color: transparent;
+                    color: rgb(253,75,254);
+
+                    &:hover {
+                        color: rgb(253,75,254);
+                        font-size: 30px;
+                    }
+                }
+
+                a {      
+                    padding-left: 0;
+                    letter-spacing: 2px;
+                    word-spacing: 1px;
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: rgb(105,0,156);
+                    transition: all 0.2s;
+                    &:hover {
+                        // color: rgb(105,0,156);
+                        color: rgb(253,75,254);
+                        // font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        .list-showing, .list-soon {
+            padding-left: 75px;
+            padding-top: 25px;
+        }
+
+        .list-right {
+            position: relative;
+            align-items: center;
+            padding-top: 25px;
+            .search-movie {
+                border: 2px solid rgb(134,35,168);
+                border-radius: 20px;
+                padding-left: 20px;
+                width: 100%;
+                color: white;
+                padding-right: 35px;
+                background-color: rgb(86,0,139);
+                font-size: 13px;
+
+                &::placeholder {
+                    color: white;
+                    font-size: 13px;
+                }
+                
+                &:focus {
+                    box-shadow: none !important;
+                }
+            }
+            .search-button {
+                    border: none;
+                    position: absolute;
+                    right: 25px;
+                    top: 27px;
+                    color: white;
+                    
+                
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    &:focus {
+                        border: none;
+                        box-shadow: none;
+                    }
+                    
+            }
+        }
+
+        .list-showing, .list-soon {
+            .items {
+
+                cursor: pointer;
+                .items-image {
+                    position: relative;
+                    .img-main {
+                        // display: inline-block;
+                        width: 65%;
+                        height: 80%;
+                    }
+                    .type {
+                        position: absolute;
+                        top: 7px;
+                        left: 10px;
+                        img {
+                            border-radius: 0 !important;
+                            width: 100%;
+                        }
+                    }
+                    .rate {
+                        position: absolute;
+                        top: 3%;
+                        right: 28%;
+                        font-size: 16px;
+                        background-color: rgba(12,27,54,.8);
+                        border: 1px solid #1f2e46;
+                        border-radius: 4px;
+                        padding: 2px;
+                        position: absolute;
+                        color: #fff;
+                        width: 54px;
+                        text-align: center;
+                        line-height: 1.1;
+                        font-weight: 700;
+
+                        .point {
+                            margin-bottom: 5px !important;
+                        }
+
+                        .star {
+                            margin-bottom: 3px !important;
+                        }
+
+                        .star {
+                            font-size: 0;
+                            img {
+                                display: inline-block;
+                                max-width: 8px;
+                            }
+                        }
+                    }
+                    .screen-soon {
+                        position: absolute;
+                        bottom: 4%;
+                        right: 28%;
+
+                        color: white;
+                        font-weight: 600;
+                        background-color: #fb4226;
+                        font-size: 12px;
+                        padding: 4px 8px;
+                        border-radius: 6px;
+                        display: block;
+                        transition: all 0.3s;
+                    }
+                    .showHidden {
+                        display: none;
+                        position: absolute;
+                        width: 78%;
+                        height: 100%;
+                        background: linear-gradient(to top,#000,transparent 100%);
+                        top: 0;
+                        border-radius: 4px;
+                        transition: all 0.3s;
+                        z-index: 5;
+
+                        button {
+                            width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        z-index: 3;
+                        background: 0 0;
+                        border: none;   
+                            img {
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                    .showBuy {
+                        position: absolute;
+                        bottom: -54px;
+                        left: 0;
+                        width: 78%;
+                        z-index: 10;
+                        padding: 5px 0px;
+                        display: none;
+                        transition: all 0.3s;
+                        
+                        .buy-btn {
+                            padding: 4px;
+                            background: linear-gradient(to left,#fb4226,#ce3017 100%);
+                            border: none;
+                            width: 100%;
+                            border-radius: 10px;
+                            img {
+                                display: inline-block;
+                                width: 40px;
+                            }
+
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                    
+                    &:hover {
+                        .screen-soon {
+                            display: none;
+                        }
+
+                        .showHidden {
+                            display: block;
+                        }
+                        .showBuy {
+                            display: block;
+                        }
+                    }
+
+                    &:after {
+                        content: '';
+                    }
+                }
+
+                .items-info {
+                    position: relative;
+                    background-color: rgb(236,70,248);
+                    border-radius: 10px;
+                    margin-right: 22%;
+                    margin-top: 5px;
+                    .title {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 17px;
+                        text-align: center;
+                        font-weight: 500;
+                        margin-bottom: 0 !important;
+                    }
+
+                    .time {
+                        color: white;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+
+                    
+
+                }
+               
+                &:focus {
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+             .slick-slide {
+                 padding-top: 26px;
+
+                 .isShow {
+                     display: none !important;
+                 }
+
+                 img {
+                    border-radius: 15px;
+                 }
+
+                 &:hover {
+                    .showHidden {
+                        display: none !important;
+                    }
+   
+                    .showBuy {
+                        display: none !important;
+                    }
+                 }
+             }
+
+            .slick-slide.slick-active.slick-center {
+                padding-top: 0;
+                margin-right: 18px;
+                margin-left: -18px;
+
+                .isShow {
+                    display: block !important;
+                }
+
+                &:hover {
+                    .showHidden {
+                        display: block !important;
+                    }
+   
+                    .showBuy {
+                        display: block !important;
+                    }
+                 }
+                 img {
+                    border-radius: 15px;
+                    width: 78%;
+                 }
+            .img-main {
+                    border-radius: 15px;
+                    //  width: 78%;
+                    width: 78%;
+                    height: 100%;
+                }
+                
+            }
+
+            .slick-dots {
+                bottom: -35px;
+                left: -18px;
+
+                li {
+                    button {  
+                        padding: 0;
+                        &:before {
+                            border: 1px solid white;
+                            background-color: white;
+                            opacity: 0.6;
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                    
+                }
+
+                .slick-active {
+                    button {  
+                        &:before {  
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .slick-prev {
+                background-image: url(../../../../assets/img/list/back-session.png);
+                background-color: transparent;
+                left: -100px;
+            }
+            .slick-next {
+                background-image: url(../../../../assets/img/list/next-session.png);
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.list-showing-2, .list-soon-2 {
+    display: none;
+}
+
+@media only screen and (max-width: 1060px) {
+    .list {
+        .screen-soon {
+            font-size: 10px !important;
+            padding: 2px 4px !important;
+        }
+        .type {
+            img {
+                width: 80% !important;
+            }
+        }
+        .rate {
+            padding: 0 !important;
+            font-size: 12px !important;
+            img {
+                max-width: 6px !important;
+            }
+        }
+        .items-info {
+            p {
+                font-size: 12px !important;
+            }
+        }
+        .showBuy {
+            font-size: 13px !important;
+            bottom: -45px !important;
+            img {
+                width: 33px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 992px) {
+    .list {
+        .list-showing, .list-soon {
+            display: none;
+        }
+
+        .wrapper-list{
+            padding-top: 60px !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            &:before {
+                top: 30px !important;
+            }
+        }
+
+        .list-title {
+            display: flex;
+            justify-content: center;
+        }
+
+        .now-showing, .now-soon {
+            a {
+                font-size: 20px !important;
+            }
+        }
+
+        .list-showing-2, .list-soon-2 {
+            display: block;
+            .items {
+                margin-bottom: 5px;
+                background-color: white;
+                padding: 8px;
+                border-radius: 10px;
+                .items-img {
+                    display: inline-block;
+                    width: 115px;
+                    float: left;
+                    margin-right: 15px;
+                    a {
+                        text-decoration: none;
+                        img {
+                            width: 100%;
+                            border-radius: 5px;
+                            border: 1px solid #000;
+                        }
+                    }
+                }
+
+                .items-info {
+                    
+                    width: calc(100% - 130px);
+                    // margin-left: 20px;
+                    height: 170px;
+                    display: inline-block;
+                    color:  #fff;
+                    font-weight: 600 !important;
+                    padding: 10px;
+                    background: url('../../../img/list/movie-bg-top.png') top left repeat-x, 
+                        url('../../../img/list/movie-bg-right.png') right top repeat-y,
+                        url('../../../img/list/movie-bg-bottom.png') bottom left repeat-x,
+                        url('../../../img/list/movie-bg-left.png') left center repeat-y
+                    ;
+                    background-color: #ce3e82;
+                    .title {
+                        font-size: 16px !important;
+                        margin-bottom: 5px;
+                        border-bottom: 1px solid #fff;
+                    }
+                    p{
+                        margin-bottom: 5px;
+                        font-weight: 500;
+                        span {
+                            font-weight: 700 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}

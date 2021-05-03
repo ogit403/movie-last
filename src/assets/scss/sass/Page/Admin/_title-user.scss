@@ -1,0 +1,53 @@
+.infoUser {
+	margin-top: 10px;
+	width: 100%;
+	background-color: white;
+	.user {
+		position: relative;
+		padding: 10px;
+		
+		img {
+			width: 35px;
+			height: 40px;
+		}
+		.content-user {
+			padding-top:5px;
+			position: absolute;
+			top: 0;
+			margin-left: 40px;
+			font-size: 0;
+			.hello {
+				font-size: 14px;
+				span {
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+			.type {
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 0;
+			}
+		}   
+		.btn-group {
+			position: absolute;
+			top: 40%;
+			left: 0;
+			margin-left: 35px;
+			button {
+				background-color: transparent;
+				color: #000;
+				border: none;
+				width: 180px;
+
+				&:focus {
+					box-shadow: none !important;
+				}
+			}
+			ul {
+				transform: translate(-20px, 30px) !important;
+			}
+		}
+	}
+	
+}
