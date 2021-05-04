@@ -79,47 +79,9 @@ export default function Regist(props) {
                 mess = 'Không được chứa chữ cái';
             }
         }
-
-        // switch(name){
-        //     case "taiKhoan": {
-        //         mess = value === '' ? 'Tài khoản không được rỗng' : '';
-        //         if((value && value.length < 4) || (value && value.length > 12)){
-        //             mess = 'Vui lòng nhập từ 4 - 12 kí tự!';
-        //         }
-        //     } break;
-        //     case 'matKhau1': {
-        //         mess = value === '' ? 'Mật khẩu không được rỗng' : '';
-        //     } break;
-        //     case 'matKhau2': {
-        //         mess = value === '' ? 'Mật khẩu không được rỗng' : '';
-        //         if(value && value !== newUser.matKhau1){
-        //             mess = 'Mật khẩu không trùng nhau!'
-        //         }
-        //     } break;
-        //     case 'hoTen': {
-        //         mess = value === '' ? 'Họ tên không được rỗng' : '';
-        //         if(value && value.match(/^[0-9]+$/)){
-        //             mess = 'Tên không được chứa chữ số';
-        //         }
-        //     } break;
-        //     case 'email': {
-        //         mess = value === '' ? 'Email không được rỗng' : '';
-        //         if(value && !value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
-        //             mess = 'Vui lòng nhập đúng định dạng';
-        //         }
-        //     } break;
-        //     default: {
-        //         mess = value === '' ? 'Số điện thoại không được rỗng' : '';
-        //         if(value && !value.match(/^[0-9]+$/)){
-        //             mess = 'Không được chứa chữ cái';
-        //         }
-        //     } break;
-        // }
         let newError = {...error, [name]: mess};
         setError(newError);
-    }
-    
-    useEffect(()=>{
+
         let {taiKhoan, matKhau1, matKhau2, hoTen, email, soDienThoai} = user;
         let newValid = {...valid};
         newValid.taiKhoan = taiKhoan !== '' ? true : false;
@@ -130,6 +92,10 @@ export default function Regist(props) {
         newValid.soDienThoai = soDienThoai !== '' ? true : false;
         newValid.isValid = newValid.taiKhoan && newValid.matKhau1 && newValid.matKhau2 && newValid.hoTen && newValid.email && newValid.soDienThoai;
         setValid(newValid);
+    }
+    
+    useEffect(()=>{
+        
     },[error, user, valid])
 
     const dispatch = useDispatch();

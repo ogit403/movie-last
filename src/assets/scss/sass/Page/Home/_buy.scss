@@ -898,10 +898,41 @@
         
     }
 }
+.buySuccess {
+    .title-datVe {
+        font-weight: 700;
+        font-size: 40px;
+        padding-top: 30px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .book-no {
+        text-align: center;
+        span {
+            color: '#EA3B92';
+            padding-left: 10px;
+        }
+    }
+    .ten-datVe {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .group-datVe {
+        padding-left: 190px;
+    }
+}
 
 @media only screen and (min-width: 1101px) {
     .combo-popup-2 {
         display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .buySuccess {
+        .group-datVe {
+            padding-left: 10% !important;
+        }
     }
 }
 
@@ -937,6 +968,33 @@
                 width: 200%;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .buySuccess {
+        .group-datVe {
+            padding-left: 0 !important;
+            display: block !important;
+            p {
+                text-align: center;
+            }
+        }
+        .items-datVe {
+            display: block;
+            max-width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .buySuccess {
+        .title-datVe   {
+            font-size: 24px !important;
+        }
+    }
+    .combo-popup-2 {
+        top: 270px !important;
     }
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 import '../../../assets/scss/sass/Layouts/_carousel.scss';
 import Slider from 'react-slick';
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
 // import slide1 from '../../../assets/img/carousel/1920x1080-4.png';
 // import slide2 from '../../../assets/img/carousel/1920wx1080h.jpg';
 // import slide3 from '../../../assets/img/carousel/1920x1080-3.png';

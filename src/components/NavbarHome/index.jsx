@@ -237,7 +237,7 @@ export default function NavbarHome() {
                                     {renderUser2()}
                                     <ul className="dropdown-menu dropdown-group" aria-labelledby="btnGroupDrop1">
                                         <li><Link className="dropdown-item dropdown-items" to="/login">Đăng nhập</Link></li>
-                                        <li><Link className="dropdown-item dropdown-items" to="/regist">Đăng ký</Link></li>
+                                        <li><Link className="dropdown-item dropdown-items" to="/sign-up">Đăng ký</Link></li>
                                     </ul>
                                 </div>
                             </div>

@@ -133,6 +133,7 @@
                         top: 7px;
                         left: 10px;
                         img {
+                            cursor: pointer;
                             border-radius: 0 !important;
                             width: 100%;
                         }
@@ -470,18 +471,17 @@
                 padding: 8px;
                 border-radius: 10px;
                 .items-img {
-                    display: inline-block;
+                    // display: inline-block;
                     width: 115px;
                     float: left;
                     margin-right: 15px;
-                    a {
-                        text-decoration: none;
+                        // text-decoration: none;
                         img {
-                            width: 100%;
+                            width: 100% !important;
                             border-radius: 5px;
                             border: 1px solid #000;
                         }
-                    }
+                    
                 }
 
                 .items-info {

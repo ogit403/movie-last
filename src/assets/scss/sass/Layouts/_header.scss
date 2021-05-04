@@ -627,3 +627,11 @@ header {
 .header-active {
     background-color: #f29438;
 }
+
+@media only screen and (max-width: 320px) {
+    header {
+        .dropdown-items {
+            padding-left: 2.5rem !important;
+        }
+    }
+}

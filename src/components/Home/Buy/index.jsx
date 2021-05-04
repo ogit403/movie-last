@@ -341,13 +341,13 @@ export default function Buy({ user }) {
         return (
             <div className="buySuccess">
                 <div className="container">
-                    <h3 style={{ fontWeight: 700, fontSize: 40, paddingTop: 30, marginBottom: 0 }} className="text-center">ĐẶT VÉ THÀNH CÔNG</h3>
-                    <p className="text-center">Booking No. :
-                        <span style={{ color: '#EA3B92', paddingLeft: 10 }}>{Math.floor(Math.random() * 100000000 + 1)}</span>
+                    <h3 className="title-datVe">ĐẶT VÉ THÀNH CÔNG</h3>
+                    <p className="book-no">Booking No. :
+                        <span>{Math.floor(Math.random() * 100000000 + 1)}</span>
                     </p>
-                    <h1 className="text-center" style={{ marginBottom: 20 }}>{list.thongTinPhim.tenPhim}</h1>
-                    <div className="row" style={{ paddingLeft: 190 }}>
-                        <div className="col-6">
+                    <h1 className="ten-datVe">{list.thongTinPhim.tenPhim}</h1>
+                    <div className="row group-datVe">
+                        <div className="col-6 items-datVe">
                             <p style={{ color: '#EA3B92' }}>Thông tin vé</p>
                             <div>
                                 <span className="title">Mã vé:</span>
@@ -387,7 +387,7 @@ export default function Buy({ user }) {
                             </div>
 
                         </div>
-                        <div className="col-6">
+                        <div className="col-6 items-datVe">
                             <p style={{ color: '#EA3B92' }}>Thông tin thanh toán</p>
                             <div className="">
                                 <span className="title">Phương thức: </span>

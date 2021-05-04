@@ -16,42 +16,44 @@ export default function List(props) {
 
     const renderShowing = () => {
         return props.list.map((items, index) => {
-            // console.log(items);
             return (
-                <div className="items" key={index}>
-                    <div className="items-image">
-                        <div className="showHidden">
-                            <button>
-                                <img src="./img/list/play-video.png" alt="" />
-                            </button>
+                <Link key={index} to={`/list-movie/${items.maPhim}`}>
+                    <div className="items" >
+                        <div className="items-image">
+                            <div className="showHidden">
+                                <button>
+                                    <img src="./img/list/play-video.png" alt="" />
+                                </button>
+                            </div>
+                            <img className="img-main" src={items.hinhAnh} alt="" />
+                            <span className="type isShow">
+                                <img src="./img/list/c-13.png" alt="" />
+                            </span>
+                            <span className="rate isShow">
+                                <p className="point">{items.danhGia}</p>
+                                <p className="star">
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.2.png" alt="" />
+                                </p>
+                            </span>
+                            <span className="screen-soon isShow">Suất chiếu sớm</span>
+                            <div className="showBuy">
+                                <button style={{textDecoration: 'none', textAlign:'center', cursor:'pointer'}} type="button" className="buy-btn">
+                                    <img style={{marginLeft:'-20px', marginRight: '10px'}} src="./img/list/icon-ticket.png" alt="" />
+                                    <span>Mua Vé Ngay</span>
+                                </button>
+                            </div>
                         </div>
-                        <img className="img-main" src={items.hinhAnh} alt="" />
-                        <span className="type isShow">
-                            <img src="./img/list/c-13.png" alt="" />
-                        </span>
-                        <span className="rate isShow">
-                            <p className="point">{items.danhGia}</p>
-                            <p className="star">
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.2.png" alt="" />
-                            </p>
-                        </span>
-                        <span className="screen-soon isShow">Suất chiếu sớm</span>
-                        <div className="showBuy">
-                            <Link style={{textDecoration: 'none', textAlign:'center', cursor:'pointer'}} to={`/list-movie/${items.maPhim}`} type="button" className="buy-btn">
-                                <img style={{marginLeft:'-20px', marginRight: '10px'}} src="./img/list/icon-ticket.png" alt="" />
-                                <span>Mua Vé Ngay</span>
-                            </Link>
+                        <div className="items-info isShow">
+                            <p className="title">{items.tenPhim}</p>
+                            <p className="time">117 phút</p>
                         </div>
                     </div>
-                    <div className="items-info isShow">
-                        <p className="title">{items.tenPhim}</p>
-                        <p className="time">117 phút</p>
-                    </div>
-                </div>
+                </Link>
+                
             )
         })
     }
@@ -59,40 +61,42 @@ export default function List(props) {
     const renderSooning = () => {
         return props.list.map((items, index) => {
             return (
-                <div className="items" key={index}>
-                    <div className="items-image">
-                        <div className="showHidden">
-                            <button>
-                                <img src="./img/list/play-video.png" alt="" />
-                            </button>
+                <Link key={index} to={`/list-movie/${items.maPhim}`}>
+                    <div className="items" key={index}>
+                        <div className="items-image">
+                            <div className="showHidden">
+                                <button>
+                                    <img src="./img/list/play-video.png" alt="" />
+                                </button>
+                            </div>
+                            <img className="img-main" src={items.hinhAnh} alt="" />
+                            <span className="type isShow">
+                                <img src="./img/list/c-13.png" alt="" />
+                            </span>
+                            <span className="rate isShow">
+                                <p className="point">{items.danhGia}</p>
+                                <p className="star">
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.png" alt="" />
+                                    <img src="./img/list/star1.2.png" alt="" />
+                                </p>
+                            </span>
+                            <span className="screen-soon isShow">Suất chiếu sớm</span>
+                            <div className="showBuy">
+                                <button className="buy-btn">
+                                    <img src="./img/list/icon-ticket.png" alt="" />
+                                    <span>Mua Vé Ngay</span>
+                                </button>
+                            </div>
                         </div>
-                        <img className="img-main" src={items.hinhAnh} alt="" />
-                        <span className="type isShow">
-                            <img src="./img/list/c-13.png" alt="" />
-                        </span>
-                        <span className="rate isShow">
-                            <p className="point">{items.danhGia}</p>
-                            <p className="star">
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.png" alt="" />
-                                <img src="./img/list/star1.2.png" alt="" />
-                            </p>
-                        </span>
-                        <span className="screen-soon isShow">Suất chiếu sớm</span>
-                        <div className="showBuy">
-                            <button className="buy-btn">
-                                <img src="./img/list/icon-ticket.png" alt="" />
-                                <span>Mua Vé Ngay</span>
-                            </button>
+                        <div className="items-info isShow">
+                            <p className="title">{items.tenPhim}</p>
+                            <p className="time">117 phút</p>
                         </div>
                     </div>
-                    <div className="items-info isShow">
-                        <p className="title">{items.tenPhim}</p>
-                        <p className="time">117 phút</p>
-                    </div>
-                </div>
+                </Link>
             )
         })
     }
@@ -101,18 +105,18 @@ export default function List(props) {
         if(props.list.length){
             return props.list.map((items, index) => {
                 return (
-                    <div key={index} className="col-12 items">
-                        <div className="items-img">
-                            <a href="?">
-                                <img src={items.hinhAnh} alt="" />
-                            </a>
+                    <Link key={index} to={`/list-movie/${items.maPhim}`}>
+                        <div className="col-12 items">
+                            <div className="items-img">
+                                    <img src={items.hinhAnh} alt="" />    
+                            </div>
+                            <div className="items-info">
+                                <p className="title">{items.tenPHim}</p>
+                                <p style={{marginTop: 10}}>Khởi chiếu: <span>{new Date(items.ngayKhoiChieu).toLocaleDateString()}</span></p>
+                                <p>Mô tả: <span>{items.moTa.slice(0, 100) + '...'}</span></p>
+                            </div>
                         </div>
-                        <div className="items-info">
-                            <p className="title">{items.tenPHim}</p>
-                            <p style={{marginTop: 10}}>Khởi chiếu: <span>{new Date(items.ngayKhoiChieu).toLocaleDateString()}</span></p>
-                            <p>Mô tả: <span>{items.moTa.slice(0, 100) + '...'}</span></p>
-                        </div>
-                    </div>
+                    </Link>
                 )
             })
         }
@@ -122,18 +126,19 @@ export default function List(props) {
         if(props.list.length){
             return props.list.map((items, index) => {
                 return (
-                    <div key={index} className="col-12 items">
-                        <div className="items-img">
-                            <a href="?">
+                    <Link key={index} to={`/list-movie/${items.maPhim}`}>
+                        <div className="col-12 items">
+                            <div className="items-img">
                                 <img src={items.hinhAnh} alt="" />
-                            </a>
+                            </div>
+                            <div className="items-info">
+                                <p className="title">{items.tenPHim}</p>
+                                <p style={{marginTop: 10}}>Khởi chiếu: <span>{new Date(items.ngayKhoiChieu).toLocaleDateString()}</span></p>
+                                <p>Mô tả: <span>{items.moTa.slice(0, 100) + '...'}</span></p>
+                            </div>
                         </div>
-                        <div className="items-info">
-                            <p className="title">{items.tenPHim}</p>
-                            <p style={{marginTop: 10}}>Khởi chiếu: <span>{new Date(items.ngayKhoiChieu).toLocaleDateString()}</span></p>
-                            <p>Mô tả: <span>{items.moTa.slice(0, 100) + '...'}</span></p>
-                        </div>
-                    </div>
+                    </Link>
+                    
                 )
             })
         }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './../../../assets/scss/sass/Layouts/_theater.scss';
 import img from '../../../assets/img/theater/bhd-star-bitexco-16105952137769.png'
 import { Link } from 'react-router-dom';
 import { Fragment } from 'react';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 // {`${index === 0 ? 'true' : 'false'}`}
 export default function Theater(props) {
     const renderRap = () => {
@@ -16,12 +18,18 @@ export default function Theater(props) {
         })
     }
 
+    
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false);
+
     const handleBuy = (id) => {
         if (localStorage.getItem("KhachHang")) {
             //accessToken = JSON.parse(localStorage.getItem("QuanTri")).accessToken;
             props.history.push(`/buy/${id}`);
         }
         else {
+            setOpen(o => !o);
+            
             //console.log('abc');
             props.history.push(`/login`);
             // alert('Vui lòng đăng nhập !!!');
@@ -114,9 +122,25 @@ export default function Theater(props) {
             )
         })
     }
+
+    const renderPopUp = () => {
+        return (
+            <Popup open={open} closeOnDocumentClick position="top center" onClose={closeModal}>
+                <div className="theater-popup" style={{textAlign: 'center'}}>
+                    <h3>Thông báo</h3>
+                    <p>Vui lòng đăng nhập</p>
+                </div>
+            </Popup>
+        )
+    }
+  
     return (
         <section className="theater">
+            {renderPopUp()}
+            
+
             <div className="wrapper-theater">
+                {/* <button style={{position: 'absolute'}} onClick={() => setOpen(o => !o)}>ABC</button> */}
                 <div className="theater-title">
                     <a href="?#">Cụm rạp - Lịch chiếu</a>
                 </div>
@@ -127,175 +151,6 @@ export default function Theater(props) {
                     </div>
                     <div className="tab-content theater-second" id="v-pills-tabContent" style={{ color: 'white' }}>
                         {renderContent()}
-                        {/* <div className="tab-pane fade show active theater-bhd" id="v-pills-bhd" role="tabpanel" aria-labelledby="v-pills-bhd-tab">
-                            <div className="d-flex align-items-start">
-                                <div className="nav flex-column nav-pills me-3" style={{height: '703px', overflowY: 'scroll', width:'50%'}} id="style-0" role="tablist" aria-orientation="vertical">
-                                    {renderCumRap('bhd', 0)}
-                                </div>
-                                <div className="tab-content theater-content scrollbar" id="style-0">
-                                    
-                                    <div className="tab-pane fade show active" id="v-pills-bhd1" role="tabpanel" aria-labelledby="v-pills-bhd-tab1">
-                                        {renderPhim(0, 0)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-bhd2" role="tabpanel" aria-labelledby="v-pills-bhd-tab2">
-                                        {renderPhim(1, 0)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-bhd3" role="tabpanel" aria-labelledby="v-pills-bhd-tab3">
-                                        {renderPhim(2, 0)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-bhd4" role="tabpanel" aria-labelledby="v-pills-bhd-tab4">
-                                        {renderPhim(3, 0)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-bhd5" role="tabpanel" aria-labelledby="v-pills-bhd-tab5">
-                                        {renderPhim(4, 0)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-bhd6" role="tabpanel" aria-labelledby="v-pills-bhd-tab6">
-                                        {renderPhim(5, 0)}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade theater-cinestar" id="v-pills-cinestar" role="tabpanel" aria-labelledby="v-pills-cinestar-tab">
-                            <div className="d-flex align-items-start" style={{height:'703px'}}>
-                                <div className="nav flex-column nav-pills me-3" style={{maxHeight: '1850px', overflowY: 'scroll', width:'50%'}} id="style-0" role="tablist" aria-orientation="vertical">
-                                    {renderCumRap('cinestar', 1)}
-                                </div>
-                                <div className="tab-content theater-content scrollbar" id="style-0">
-                                    <div className="tab-pane fade show active" id="v-pills-cinestar1" role="tabpanel" aria-labelledby="v-pills-cinestar-tab1">
-                                        {renderPhim(0, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar2" role="tabpanel" aria-labelledby="v-pills-cinestar-tab2">
-                                        {renderPhim(1, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar3" role="tabpanel" aria-labelledby="v-pills-cinestar-tab3">
-                                        {renderPhim(2, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar4" role="tabpanel" aria-labelledby="v-pills-cinestar-tab4">
-                                        {renderPhim(3, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar5" role="tabpanel" aria-labelledby="v-pills-cinestar-tab5">
-                                        {renderPhim(4, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar6" role="tabpanel" aria-labelledby="v-pills-cinestar-tab6">
-                                        {renderPhim(5, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id=" v-pills-cinestar7" role="tabpanel" aria-labelledby="v-pills-cinestar-tab7">
-                                        {renderPhim(6, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar8" role="tabpanel" aria-labelledby="v-pills-cinestar-tab8">
-                                        {renderPhim(7, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar9" role="tabpanel" aria-labelledby="v-pills-cinestar-tab9">
-                                        {renderPhim(8, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar10" role="tabpanel" aria-labelledby="v-pills-cinestar-tab10">
-                                        {renderPhim(9, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar11" role="tabpanel" aria-labelledby="v-pills-cinestar-tab11">
-                                        {renderPhim(10, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar12" role="tabpanel" aria-labelledby="v-pills-cinestar-tab12">
-                                        {renderPhim(11, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id=" v-pills-cinestar13" role="tabpanel" aria-labelledby="v-pills-cinestar-tab13">
-                                        {renderPhim(12, 1)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-cinestar14" role="tabpanel" aria-labelledby="v-pills-cinestar-tab14">
-                                        {renderPhim(13, 1)}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade theater-ddc" id="v-pills-ddc" role="tabpanel" aria-labelledby="v-pills-ddc-tab">
-                            <div className="d-flex align-items-start">
-                                <div className="nav flex-column nav-pills me-3" style={{height: '703px', overflowY: 'scroll', width:'50%'}} id="style-0" role="tablist" aria-orientation="vertical">
-                                    {renderCumRap('ddc', 2)}
-                                </div>
-                                <div className="tab-content theater-content scrollbar" id="style-0">
-                                    <div className="tab-pane fade show active" id="v-pills-ddc1" role="tabpanel" aria-labelledby="v-pills-ddc-tab1">
-                                        {renderPhim(0, 2)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-ddc2" role="tabpanel" aria-labelledby="v-pills-ddc-tab2">
-                                        {renderPhim(1, 2)}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade theater-mega" id="v-pills-mega" role="tabpanel" aria-labelledby="v-pills-mega-tab">
-                            <div className="d-flex align-items-start" style={{height:'703px'}}>
-                                <div className="nav flex-column nav-pills me-3" style={{height: '803px', overflowY: 'scroll', width:'50%'}} id="style-0" role="tablist" aria-orientation="vertical">
-                                {renderCumRap('mega', 3)}
-                                </div>
-                                <div className="tab-content theater-content scrollbar" id="style-0">
-                                    <div className="tab-pane fade show active" id="v-pills-mega1" role="tabpanel" aria-labelledby="v-pills-mega-tab1">
-                                        {renderPhim(0, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega2" role="tabpanel" aria-labelledby="v-pills-mega-tab2">
-                                    {renderPhim(1, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega3" role="tabpanel" aria-labelledby="v-pills-mega-tab3">
-                                    {renderPhim(2, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega4" role="tabpanel" aria-labelledby="v-pills-mega-tab4">
-                                    {renderPhim(3, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega5" role="tabpanel" aria-labelledby="v-pills-mega-tab5">
-                                    {renderPhim(4, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega6" role="tabpanel" aria-labelledby="v-pills-mega-tab6">
-                                    {renderPhim(5, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega7" role="tabpanel" aria-labelledby="v-pills-mega-tab7">
-                                    {renderPhim(6, 3)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-mega8" role="tabpanel" aria-labelledby="v-pills-mega-tab8">
-                                    {renderPhim(7, 3)}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade theater-dcine" id="v-pills-dcine" role="tabpanel" aria-labelledby="v-pills-dcine-tab">
-                            <div className="d-flex align-items-start">
-                                <div className="nav flex-column nav-pills me-3" style={{height: '703px', overflowY: 'scroll', width:'50%'}} id="style-0" role="tablist" aria-orientation="vertical">
-                                {renderCumRap('dcine', 4)}
-                                </div>
-                                <div className="tab-content theater-content scrollbar" id="style-0">
-                                    <div className="tab-pane fade show active" id="v-pills-dcine1" role="tabpanel" aria-labelledby="v-pills-dcine-tab1">
-                                        {renderPhim(0, 4)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-dcine2" role="tabpanel" aria-labelledby="v-pills-dcine-tab2">
-                                        {renderPhim(1, 4)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-dcine3" role="tabpanel" aria-labelledby="v-pills-dcine-tab3">
-                                        {renderPhim(2, 4)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-dcine4" role="tabpanel" aria-labelledby="v-pills-dcine-tab4">
-                                        {renderPhim(3, 4)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-dcine5" role="tabpanel" aria-labelledby="v-pills-dcine-tab5">
-                                        {renderPhim(4, 4)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-dcine6" role="tabpanel" aria-labelledby="v-pills-dcine-tab6">
-                                        {renderPhim(5, 4)}
-                                    </div>
-                                    <div className="tab-pane fade" id="v-pills-dcine7" role="tabpanel" aria-labelledby="v-pills-dcine-tab7">
-                                        {renderPhim(6, 4)}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade theater-lotte" id="v-pills-lotte" role="tabpanel" aria-labelledby="v-pills-lotte-tab">
-                            <div className="d-flex align-items-start">
-                                <div className="nav flex-column nav-pills me-3" style={{height: '703px', overflowY: 'scroll', width:'50%'}} id="style-0" role="tablist" aria-orientation="vertical">
-                                {renderCumRap('lotte', 5)}
-                                </div>
-                                <div className="tab-content theater-content scrollbar" id="style-0">
-                                    <div className="tab-pane fade show active" id="v-pills-lotte1" role="tabpanel" aria-labelledby="v-pills-lotte-tab1">
-                                        {renderPhim(0, 5)}
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>

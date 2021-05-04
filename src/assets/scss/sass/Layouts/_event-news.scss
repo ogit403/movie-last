@@ -365,3 +365,11 @@
         }
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .quickmenu {
+        a {
+            font-size: 9px !important;
+        }
+    }
+}
