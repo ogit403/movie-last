@@ -395,6 +395,25 @@
     }
 }
 
+@media only screen and (max-width: 1220px) {
+    .theater {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .theater {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        .theater-title {
+            a {
+                left: 0 !important;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .theater {
         display: none;

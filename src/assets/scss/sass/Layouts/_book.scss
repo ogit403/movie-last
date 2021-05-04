@@ -224,8 +224,50 @@
 	background-color: #ccc;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
     .list-book {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .list-book {
+        .wrapper-book {
+            width: 95% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .list-book {
+        .wrapper-book {
+            width: 95% !important;
+            .selectMenu {
+                font-size: 14px !important;
+
+                
+            }
+            .book-button {
+                button {
+                        font-size: 12px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .list-book {
+        .wrapper-book {
+            width: 95% !important;
+            .selectMenu {
+                font-size: 14px !important;
+            }
+            .book-button {
+                button {
+                        font-size: 11px !important;
+                }
+            }
+        }
     }
 }
