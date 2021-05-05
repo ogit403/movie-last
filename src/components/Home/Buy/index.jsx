@@ -1,23 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import '../../../assets/scss/sass/Page/Home/_buy.scss'
-// import touch from '../../../assets/img/buy/touchcinema.png';
 import screen from '../../../assets/img/buy/screen.png';
-// import seatcenter from '../../../assets/img/buy/seatcenter.png';
-// import ticket from '../../../assets/img/buy/icon-ticket.png';
 import avatar from '../../../assets/img/buy/avatar.png';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import Popup from 'reactjs-popup';
 
-export default function Buy({ user }) {
+export default function Buy({ user, history }) {
 
     const list = useSelector(state => state.BuyReducer.buy);
-    // const status = useSelector(state => state.BuyReducer.status);
-    // console.log(list);
-
     const [listGhe, setlistGhe] = useState([]);
-    // const [total, setTotal] = useState(0);
-    // const [totalGhe, settotalGhe] = useState(0)
-    // const [totalCombo, settotalCombo] = useState(0);
     const [isCombo, setIsCombo] = useState(true);
     const [listCombo, setListCombo] = useState([0, 0, 0, 0, 0, 0]);
     const listMoney = [55, 60, 55, 60, 80, 75];
@@ -58,7 +50,7 @@ export default function Buy({ user }) {
     const params = useParams();
 
 
-    let temp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    let tempList = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
     const [datve, setDatve] = useState(false);
 
     useEffect(() => {
@@ -86,8 +78,6 @@ export default function Buy({ user }) {
             data: items
         })
         let newDatVe = !datve;
-        // let newListGhe = [];
-        //setlistGhe(newListGhe);
         setDatve(newDatVe);
     }
 
@@ -98,8 +88,14 @@ export default function Buy({ user }) {
         setCheckBox(newCheck);
     }
 
+    const handlePush = () => {
+        localStorage.removeItem("KhachHang");
+        history.push('/login');
+    }
+
     const renderFirst = () => {
         if (Object.keys(list).length) {
+            const temp = JSON.parse(localStorage.getItem("KhachHang"));
             return (
                 <>
                     <div className="member">
@@ -107,7 +103,7 @@ export default function Buy({ user }) {
                             <img src={avatar} alt="" />
                         </div>
                         <div className="info">
-                            <p className="name">{user.hoTen}</p>
+                            <p className="name">{temp.hoTen}</p>
                             <p>Member</p>
                         </div>
                     </div>
@@ -131,11 +127,23 @@ export default function Buy({ user }) {
                                     let res;
                                     if (i <= 9) res = '0' + (i);
                                     else res = i;
-                                    return (
-                                        <span>
-                                            {temp[tam]}{res},
-                                        </span>
-                                    )
+                                    // console.log(tam);
+                                    // console.log(temp[tam])
+                                    if(index === 0){
+                                        return (
+                                            <span key={index}>
+                                                {tempList[tam]}{res}
+                                            </span>
+                                        )
+                                    }
+                                    else {
+                                        return (
+                                            <span key={index}>
+                                                ,{tempList[tam]}{res}
+                                            </span>
+                                        )
+                                    }
+                                   
                                 })}
                             </div>
                             <div className="price">
@@ -144,7 +152,6 @@ export default function Buy({ user }) {
                         </div>
                         <div className="select combo">
                             <button onClick={handleCombo}>
-                                {/* <span className="data" /> */}
                                 Chọn Combo
                             </button>
                             <div className="price">
@@ -155,7 +162,7 @@ export default function Buy({ user }) {
                     <div className="login">
                         <h3 className="title"><a href="?#">Thông tin đặt vé</a></h3>
                         {renderThongTin()}
-                        <a href="?#" className="warn">Đăng nhập tài khoản khác  hoặc Đổi thông tin</a>
+                        <button style={{backgroundColor: 'transparent', border: 'none'}} onClick={handlePush} className="warn">Đăng nhập tài khoản khác  hoặc Đổi thông tin</button>
                     </div>
                     <p style={{fontWeight: 600, marginBottom: 0, marginTop: 10}}>Chọn phương thức thanh toán:</p>
                     <div>
@@ -178,6 +185,8 @@ export default function Buy({ user }) {
         }
     }
 
+
+
     const renderGhe = () => {
 
         if (Object.keys(list).length){
@@ -193,21 +202,22 @@ export default function Buy({ user }) {
                 if (index <= 95) {
                     if (items.daDat) {
                         return (
-                            <button style={{ width: 34, color: '#000', textDecoration: 'none', pointerEvents: 'none' }} className={`seat-number booked ${i === 0 ? ' first' : ''} ${i === 1 ? ' left' : ''}`}>
-                                {temp[Math.floor(tam)]}{res}
+                            <button key={index} style={{ width: 34, color: '#000', textDecoration: 'none', pointerEvents: 'none' }} className={`seat-number booked ${i === 0 ? ' first' : ''} ${i === 1 ? ' left' : ''}`}>
+                                {tempList[Math.floor(tam)]}{res}
                             </button>
                         )
                     }
                     if (daDat1 === -1)
                         return (
-                            <button onClick={() => handleGhe(items)} style={{ width: 34, color: '#000', textDecoration: 'none' }} className={`seat-number ${i === 0 ? ' first' : ''} ${items.loaiGhe === 'Thuong' ? ' normal' : ' vip'} ${i === 1 ? ' left' : ''}`}>
-                                {temp[Math.floor(tam)]}{res}
+                            <button key={index} onClick={() => handleGhe(items)} style={{ width: 34, color: '#000', textDecoration: 'none' }} className={`seat-number ${i === 0 ? ' first' : ''} ${items.loaiGhe === 'Thuong' ? ' normal' : ' vip'} ${i === 1 ? ' left' : ''}`}>
+                                {tempList[Math.floor(tam)]}{res}
                             </button>
                         )
                     else {
+                        // ${items.loaiGhe === 'Thuong' ? ' normal select-normal' : ' vip select-vip m h '}
                         return (
-                            <button onClick={() => handleGhe(items)} style={{ width: 34, color: '#000', textDecoration: 'none' }} className={`seat-number ${i === 0 ? ' first' : ''} ${items.loaiGhe === 'Thuong' ? ' normal select-normal' : ' vip select-vip m h '} ${i === 1 ? ' left' : ''}`}>
-                                {temp[Math.floor(tam)]}{res}
+                            <button key={index} onClick={() => handleGhe(items)} style={{ width: 34, color: '#000', textDecoration: 'none' }} className={`seat-number ${i === 0 ? ' first' : ''} select-ghe   ${i === 1 ? ' left' : ''}`}>
+                                {tempList[Math.floor(tam)]}{res}
                             </button>
                         )
                     }
@@ -232,13 +242,16 @@ export default function Buy({ user }) {
         return newTotalCombo;
     }
 
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false);
+
     const handleGhe = (items) => {
         let newList = [...listGhe];
 
         let i = newList.findIndex(item => item === items);
-        // console.log(i);
         if (i === -1) {
-            if (newList.length === 7) {
+            if (newList.length === 5) {
+                setOpen(o => !o)
                 return;
             }
             newList.push(items);
@@ -271,7 +284,7 @@ export default function Buy({ user }) {
                 <p className="title">Combo</p>
                 {stateCombo.map((items, index) => {
                     return (
-                        <div className="combo-items">
+                        <div key={index} className="combo-items">
                             <div className="image"></div>
                             <div className="combo-info">
                                 <span className="name">{items.name}</span>
@@ -297,7 +310,7 @@ export default function Buy({ user }) {
                 <p className="title">Combo</p>
                 {stateCombo.map((items, index) => {
                     return (
-                        <div className="combo-items">
+                        <div key={index} className="combo-items">
                             <div className="image"></div>
                             <div className="combo-info">
                                 <span className="name">{items.name}</span>
@@ -338,6 +351,7 @@ export default function Buy({ user }) {
     }
 
     if (datve) {
+        const userDatVe = JSON.parse(localStorage.getItem('KhachHang'));
         return (
             <div className="buySuccess">
                 <div className="container">
@@ -365,11 +379,20 @@ export default function Buy({ user }) {
                                         let res;
                                         if (i <= 9) res = '0' + (i);
                                         else res = i;
-                                        return (
-                                            <span>
-                                                {temp[tam]}{res},
-                                            </span>
-                                        )
+                                        if(index === 0){
+                                            return (
+                                                <span key={index}>
+                                                    {tempList[tam]}{res}
+                                                </span>
+                                            )
+                                        }
+                                        else {
+                                            return (
+                                                <span key={index}>
+                                                    ,{tempList[tam]}{res}
+                                                </span>
+                                            )
+                                        }
                                     })}
                                 </span>
                             </div>
@@ -399,11 +422,11 @@ export default function Buy({ user }) {
                             </div>
                             <div className="">
                                 <span className="title">Họ tên:</span>
-                                <span className="info"><span>{user.hoTen}</span></span>
+                                <span className="info"><span>{userDatVe.hoTen}</span></span>
                             </div>
                             <div className="">
                                 <span className="title">Email:</span>
-                                <span className="info"><span>{user.email}</span></span>
+                                <span className="info"><span>{userDatVe.email}</span></span>
                             </div>
                         </div>
                     </div>
@@ -418,6 +441,15 @@ export default function Buy({ user }) {
     else {
         return (
             <section className="buy">
+                <Popup open={open} position="top center" closeOnDocumentClick onClose={closeModal}>
+                <button style={{cursor: 'pointer'}} className="close" onClick={closeModal}>
+                    &times;
+                </button>
+                    <div className="modal-buy">
+                        <p>Thông báo</p>
+                        <h3>Chỉ được chọn tối đa 5 ghế!!!</h3>
+                    </div>
+                </Popup>
                 <div className="wrapper-buy">
                     <div className="main-left">
                         <div className="buy-content">
@@ -447,15 +479,8 @@ export default function Buy({ user }) {
                                                         Lối ra
                                                 </div>
                                                 </div>
-                                                
-                                                    {/* <div className="scroll-seat-2"> */}
-                                                        <div className="seat-full">
-                                                            {/* <div className="seat-center">
-                                                                <img src={seatcenter} alt />
-                                                            </div> */}
-                                                            {renderGhe()}
-                                                        
-                                                    {/* </div> */}
+                                                    <div className="seat-full">
+                                                        {renderGhe()}
                                                 </div>
                                                
                                             </div>
@@ -474,10 +499,6 @@ export default function Buy({ user }) {
                                                         <span />
                                                     Ghế đang chọn
                                                     </div>
-                                                    {/* <div className="seat booked">
-                                                        <span />
-                                                    Ghế đã có người chọn
-                                                    </div> */}
                                                     <div className="seat not">
                                                         <span />
                                                     Ghế không thể chọn
@@ -501,18 +522,13 @@ export default function Buy({ user }) {
                     <div className="main-right">
                         <div className="main-right-content">
                             <div className="main-full">
-                                {/*  */}
                                 {renderFirst()}
-                                {/*  */}
-                                {renderCombo2()}
-                                
+                                {renderCombo2()}                            
                             </div>
                         </div>
                         
                     </div>
-
                     {renderCombo()}
-                    
                 </div>
             </section>
 

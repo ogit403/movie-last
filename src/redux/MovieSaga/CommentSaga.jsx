@@ -31,6 +31,12 @@ function * putAPIComment(action){
             type: 'SHOW_LOADING'
         })
         yield call(() => commentService.putTaskAPIComment(action));
+        const {data} = yield call(commentService.getTaskAPIComment);
+        
+        yield put({
+            type: 'commentReducer/GET_API',
+            data
+        })
     }
     catch(err) {
         console.log(err)
@@ -46,6 +52,12 @@ export function * theoDoiPutAPIComment(){
             type: 'SHOW_LOADING'
         })
         yield takeLatest('PUT_API_COMMENT', putAPIComment)
+        const {data} = yield call(commentService.getTaskAPIComment);
+        
+        yield put({
+            type: 'commentReducer/GET_API',
+            data
+        })
     }
     catch(err){
         console.log(err)
@@ -61,6 +73,12 @@ function * postAPIComment(action){
             type: 'SHOW_LOADING'
         })
         yield call(() => commentService.postTaskAPIComment(action.data));
+        const {data} = yield call(commentService.getTaskAPIComment);
+        
+        yield put({
+            type: 'commentReducer/GET_API',
+            data
+        })
     }
     catch(err){
         console.log(err)

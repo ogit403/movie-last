@@ -34,9 +34,9 @@ export default function Review(props) {
                             <img src={items.hinhAnh} alt="" />
                         </div>
                         <div className="info">
-                            <a href="?#">
+                            <Link to={`/detail-review/${items.id}`}>
                                 <h3>{items.title}</h3>
-                            </a>
+                            </Link>
                             <div className="detail">
                                 <p>  
                                     {items.content.slice(0, 100) + '...'}
@@ -46,7 +46,7 @@ export default function Review(props) {
                     </div>
                 )
             }
-            else return <></>
+            else return <div key={index}></div>
         })
     }
 

@@ -33,11 +33,11 @@ export default function AppMobile() {
                         <p className="textBottom">
                             TIX có hai phiên bản
                             &nbsp;
-                            <a href="?#">IOS</a>
+                            <button>IOS</button>
                             &nbsp;
                             &amp;
                             &nbsp;
-                            <a href="?#">Android</a>
+                            <button>Android</button>
                         </p>
                     </div>
                     <div className="col-6 right">

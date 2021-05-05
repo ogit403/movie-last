@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import '../../../assets/scss/sass/Page/Home/_detail.scss'
 import ticket from '../../../assets/img/list-movie/icon-ticket.png';
 import rap from '../../../assets/img/theater/bhd-star-vincom-thao-dien-16105955634183.png';
@@ -6,7 +6,7 @@ import arrow from '../../../assets/img/detail/arrow-down.png';
 import { Link } from 'react-router-dom';
 import icon from '../../../assets/img/detail/icon.jpg'
 import listStar from '../../../assets/img/detail/listStar.png'
-import xControl from '../../../assets/img/detail/xController.png'
+// import xControl from '../../../assets/img/detail/xController.png'
 import starSelect from '../../../assets/img/detail/StarSelect.png'
 import fb from '../../../assets/img/detail/facebook.svg'
 import star1 from '../../../assets/img/detail/star1.png';
@@ -14,6 +14,8 @@ import star1 from '../../../assets/img/detail/star1.png';
 // import like from '../../../assets/img/detail/like.png';
 import { useDispatch, useSelector } from 'react-redux';
 // import Alert from 'react-bootstrap/Alert'
+import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
+import ModalVideo from 'react-modal-video'
 
 export default function Detail(props) {
     const dispatch = useDispatch();
@@ -79,7 +81,7 @@ export default function Detail(props) {
                                         else result = tam + index;
 
                                         return (
-                                            <div className={`nav-link ${indexRes === 0 ? ' active' : ''} listDay`} id={`${items.maHeThongRap}-date${indexRes}`} data-bs-toggle="pill" data-bs-target={`#content-${items.maHeThongRap}-date${indexRes}`} aria-controls={`content-${items.maHeThongRap}-date${indexRes}`} aria-selected="false">
+                                            <div key={indexRes} className={`nav-link ${indexRes === 0 ? ' active' : ''} listDay`} id={`${items.maHeThongRap}-date${indexRes}`} data-bs-toggle="pill" data-bs-target={`#content-${items.maHeThongRap}-date${indexRes}`} aria-controls={`content-${items.maHeThongRap}-date${indexRes}`} aria-selected="false">
                                                 <p className="date">{result}</p>
                                                 <p className="numer">{new Date(res.ngayChieuGioChieu).toLocaleDateString().substr(2, 1)}</p>
                                             </div>
@@ -92,7 +94,7 @@ export default function Detail(props) {
                             <div className="tab-content wrapContent" id="v-pills-tabContent">
                                 {arrRap.map((rapchieu, indexRapchieu) => {
                                     return (
-                                        <div className={`tab-pane fade show ${indexRapchieu === 0 ? ' active' : ''} contents`} id={`content-${items.maHeThongRap}-date${indexRapchieu}`} role="tabpanel" aria-labelledby={`${items.maHeThongRap}-date${indexRapchieu}`}>
+                                        <div key={indexRapchieu} className={`tab-pane fade show ${indexRapchieu === 0 ? ' active' : ''} contents`} id={`content-${items.maHeThongRap}-date${indexRapchieu}`} role="tabpanel" aria-labelledby={`${items.maHeThongRap}-date${indexRapchieu}`}>
                                             <div className="scrollbar" id="style-1">
                                                 {items.cumRapChieu.map((theater, indexTheater) => {
                                                     arrTheoNgay = [];
@@ -105,7 +107,7 @@ export default function Detail(props) {
 
                                                     let i = theater.tenCumRap.search(' - ');
                                                     return (
-                                                        <div className="content-items">
+                                                        <div key={indexTheater} className="content-items">
                                                             <div className="items-movie">
                                                                 <img src={rap} alt="" />
                                                                 <div className="movie-info">
@@ -127,7 +129,7 @@ export default function Detail(props) {
                                                                         else time = time.substr(0, 4);
                                                                         return (
                                                                             //to={`/buy/${timeMovie.maLichChieu}`}
-                                                                            <Link onClick={() => handleBuy(timeMovie.maLichChieu)} className="watch">
+                                                                            <Link key={indexTime} onClick={() => handleBuy(timeMovie.maLichChieu)} className="watch">
                                                                                 <span className="watch-1">{time} </span>
                                                                             </Link>
                                                                         )
@@ -153,7 +155,7 @@ export default function Detail(props) {
         if (props.review.length)
             return props.review.map((itemReview, indexReview) => {
                 return (
-                    <div className="col-4 items-post">
+                    <div key={indexReview} className="col-4 items-post">
                         <img src={itemReview.hinhAnh} alt="" />
                         <h3>
                             <Link to={`/detail-review/${itemReview.id}`}>
@@ -175,7 +177,7 @@ export default function Detail(props) {
                         arrStar.push(1);
                     }
                     return (
-                        <div className="wrapper" style={{ paddingBottom: 0 }}>
+                        <div key={index} className="wrapper" style={{ paddingBottom: 0 }}>
                             <div className="row info">
                                 <div className="col-6 reviewer">
                                     <div className="image">
@@ -192,9 +194,9 @@ export default function Detail(props) {
                                     <div style={{ paddingTop: 10 }} className="star">
                                         {arrStar.map((a, b) => {
                                             return (
-                                                <>
+                                                <Fragment key={b}>
                                                     <img src={star1} alt="" />
-                                                </>
+                                                </Fragment>
                                             )
                                         })}
                                     </div>
@@ -298,16 +300,23 @@ export default function Detail(props) {
 
     }
 
-
+    const [isOpen, setOpen] = useState(false);
+    let idYoutube;
+    if(Object.keys(props.items).length){
+        idYoutube = props.items.trailer.substr(32);
+    }
+    // console.log(props.items.trailer.substr(32));
+    // console(idYoutube);
     return (
         <section className="detailPhim ">
             <div className="wrapper-detail container">
                 <div className="trailer">
                     <div className="overplay" />
                     <div className="trailer-button">
-                        <a href="?#">
+                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={idYoutube} onClose={() => setOpen(false)} />
+                        <button onClick={()=> setOpen(true)}>
                             <span />
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="detail">
@@ -315,9 +324,9 @@ export default function Detail(props) {
                         <img src={props.items.hinhAnh} alt="" />
                     </div>
                     <div className="detail-info">
-                        <a href="?" className="info-title">
+                        <Link to={`/list-movie/${props.items.maPhim}`} className="info-title">
                             <h1>{props.items.tenPhim}</h1>
-                        </a>
+                        </Link>
 
                         <div className="info-content">
                             <div className="info-items">
@@ -333,7 +342,8 @@ export default function Detail(props) {
                                 <p>16/04/2021</p>
                             </div>
                             <div className="info-items">
-                                <button className="btn btn-warning">TRAILER</button>
+                            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={idYoutube} onClose={() => setOpen(false)} />
+                                <button onClick={()=> setOpen(true)} className="btn btn-warning">TRAILER</button>
                             </div>
                         </div>
 
@@ -370,7 +380,6 @@ export default function Detail(props) {
                             {props.items.moTa}
                         </p>
                     </div>
-                    {/* <button href="#" className="btn-show"></button> */}
                 </div>
                 <div className="showtime">
                     <div className="wrapper-showtime">
@@ -482,7 +491,7 @@ export default function Detail(props) {
                             aria-label="Close"
                             refs="cancle"
                         >
-                            <img src={xControl} alt="" />
+                            
                         </button>
                         <div className="star" style={{ marginTop: 30 }}>
                             {star.list.map((items, index) => {

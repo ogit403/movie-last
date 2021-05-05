@@ -1,5 +1,4 @@
 import React from 'react'
-// import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import '../../../assets/scss/sass/Page/Home/_events.scss'
@@ -7,19 +6,14 @@ import arrow from '../../../assets/img/detail/arrow-down.png';
 export default function EventMovie(props) {
 
     const params = useParams();
-    // console.log(params);
     const renderEvent = () => {
         if(props.listEvent.length)
         return props.listEvent.map((items, index) => {
-            // console.log(params.page)
             let number = parseInt(params.page);
             if(index >= number * number  && index <= number * number + 4){
-                // console.log(index);
                 return (
                     <div key={index} className="items-event">
                             <img src={items.hinhAnh} alt="" />
-                        {/* <div className="items-img">
-                        </div> */}
                         <div className="info">
                             <Link to={`/detail-event/${items.id}`}>
                                 <h3>{items.title}</h3>
@@ -31,7 +25,7 @@ export default function EventMovie(props) {
                     </div>
                 )
             }
-            else return <></>
+            else return <div key={index}></div>
         })
     }
 

@@ -9,7 +9,7 @@ export default function ListDate({list, arr, history}) {
         if(list.length)
             return list.map((items, index) => {
                 return (
-                    <a href="?" className={`nav-link ${index === 0 ? ' active' : ''} cinema-items`} role="tab" id={`cinema-${items.maHeThongRap}`} data-bs-toggle="pill" data-bs-target={`#v-${items.maHeThongRap}`} aria-controls={`v-${items.maHeThongRap}`} aria-selected="true">
+                    <a key={index} href="?#" className={`nav-link ${index === 0 ? ' active' : ''} cinema-items`} role="tab" id={`cinema-${items.maHeThongRap}`} data-bs-toggle="pill" data-bs-target={`#v-${items.maHeThongRap}`} aria-controls={`v-${items.maHeThongRap}`} aria-selected="true">
                         <img src={items.logo} alt="" />
                         <span className="name">{items.tenHeThongRap}</span>
                     </a>
@@ -31,7 +31,7 @@ export default function ListDate({list, arr, history}) {
         return arr.map((items, index) => {
             return (
                 <>
-                    <div className={`tab-pane fade show ${index === 0 ? ' active' : ''} items-movie`} id={`v-${items.maHeThongRap}`} role="tabpanel" aria-labelledby={`cinema-${items.maHeThongRap}`}>
+                    <div key={index} className={`tab-pane fade show ${index === 0 ? ' active' : ''} items-movie`} id={`v-${items.maHeThongRap}`} role="tabpanel" aria-labelledby={`cinema-${items.maHeThongRap}`}>
                         <div className="title-group">
                             <p>rạp chiếu phim</p>
                         </div>
@@ -40,7 +40,7 @@ export default function ListDate({list, arr, history}) {
                                 {items.lstCumRap.map((theater, indexTheater) => {
                                     let temp = theater.tenCumRap.search(' - ');
                                     return (
-                                        <div className={`nav-link ${indexTheater === 0 ? ' active' : ''} items`} id={`${items.maHeThongRap}-${indexTheater}`} data-bs-toggle="pill" data-bs-target={`#${items.maHeThongRap}-content-${indexTheater}`} aria-controls={`${items.maHeThongRap}-content-${indexTheater}`} aria-selected="true">
+                                        <div key={indexTheater} className={`nav-link ${indexTheater === 0 ? ' active' : ''} items`} id={`${items.maHeThongRap}-${indexTheater}`} data-bs-toggle="pill" data-bs-target={`#${items.maHeThongRap}-content-${indexTheater}`} aria-controls={`${items.maHeThongRap}-content-${indexTheater}`} aria-selected='true'>
                                             <img src="./img/list-date/bhd-star-bitexco-16105952137769.png" alt="" />
                                             <span className="name">
                                                 {theater.tenCumRap.substr(0, temp)}
@@ -49,9 +49,9 @@ export default function ListDate({list, arr, history}) {
                                             <span className="address">
                                                 {theater.diaChi}
                                                             </span>
-                                            <a href="?" className="detail">
+                                            <Link to={`/detail-movie/${items.maHeThongRap}`} className="detail">
                                                 [chi tiết]
-                                                    </a>
+                                                    </Link>
                                         </div>
                                     )
                                 })}                  
@@ -62,10 +62,10 @@ export default function ListDate({list, arr, history}) {
                             <div className="tab-content movie-content" id="bhd-content">
                                 {items.lstCumRap.map((theater, indexTheater) => {
                                     return (
-                                        <div className={`tab-pane fade show ${indexTheater === 0 ? ' active' : ''} movie-group`} id={`${items.maHeThongRap}-content-${indexTheater}`} role="tabpanel" aria-labelledby={`${items.maHeThongRap}-${indexTheater}`}>
+                                        <div key={indexTheater} className={`tab-pane fade show ${indexTheater === 0 ? ' active' : ''} movie-group`} id={`${items.maHeThongRap}-content-${indexTheater}`} role="tabpanel" aria-labelledby={`${items.maHeThongRap}-${indexTheater}`}>
                                             {theater.danhSachPhim.map((movie, indexMovie) => {
                                                 return (
-                                                    <div className="row movie-content">
+                                                    <div key={indexMovie} className="row movie-content">
                                                         <div className="col-12 col-lg-3 col-xl-3 movie-image">
                                                             <div className="poster">
                                                                 <Link to={`/list-movie/${movie.maPhim}`}>
@@ -114,11 +114,14 @@ export default function ListDate({list, arr, history}) {
                                                             </div>
                                                             <div className="time">
                                                                 {movie.lstLichChieuTheoPhim.map((date, indexDate) => {
+                                                                    let setTime = new Date(date.ngayChieuGioChieu).toLocaleTimeString();
+                                                                    if(setTime[2] === ':') setTime = setTime.slice(0, 5);
+                                                                    else setTime = setTime.slice(0,4);
                                                                     return (
-                                                                        <a onClick={() => handleBuy(date.maLichChieu)} href="?#" className="watch">
-                                                                            <span className="watch-1">{new Date(date.ngayChieuGioChieu).toLocaleTimeString().slice(0,5)} </span>
+                                                                        <button key={indexDate} onClick={() => handleBuy(date.maLichChieu)} className="watch">
+                                                                            <span className="watch-1">{setTime} </span>
                                                                          
-                                                                        </a>
+                                                                        </button>
                                                                     )
                                                                 })}
                                                                 

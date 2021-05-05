@@ -4,6 +4,8 @@ import bg from '../../../assets/img/detail-cinema/background.png';
 import image from '../../../assets/img/detail-cinema/bhd-star-bitexco-16105952220224.png';
 import ticket from '../../../assets/img/list-movie/icon-ticket.png';
 import star from '../../../assets/img/detail-cinema/star1.png';
+import { Fragment } from 'react';
+import { Link } from '@material-ui/core';
 
 export default function DetailMovie({list}) {
     // console.log(list);
@@ -12,7 +14,7 @@ export default function DetailMovie({list}) {
         if(list.length)
         return list[0].lstCumRap.map((items, index) => {
             return (
-                <li className="nav-item cinemas" role="presentation">
+                <li key={index} className="nav-item cinemas" role="presentation">
                     <a href="?" className={`nav-link ${index === 0 ? ' active' : ''} items`} id={`pills-${list[0].maHeThongRap}-tab${index}`} data-bs-toggle="pill" data-bs-target={`#pills-${list[0].maHeThongRap}${index}`} type="button" role="tab" aria-controls={`pills-${list[0].maHeThongRap}${index}`} aria-selected="true">
                         <img src={image} alt="" />
                         <div className="info">
@@ -44,7 +46,7 @@ export default function DetailMovie({list}) {
             arrNgay = arrNgay.slice(0, 10);
 
             return (
-                <div className={`tab-pane fade show ${index === 0 ? ' active' : ''}`} id={`pills-${list[0].maHeThongRap}${index}`} role="tabpanel" aria-labelledby={`pills-${list[0].maHeThongRap}-tab${index}`}>
+                <div key={index} className={`tab-pane fade show ${index === 0 ? ' active' : ''}`} id={`pills-${list[0].maHeThongRap}${index}`} role="tabpanel" aria-labelledby={`pills-${list[0].maHeThongRap}-tab${index}`}>
                     <div className="scrollbar dayOfWeek" id="style-2">
                         <div className="nav nav-pills mb-3 wrapDayOfWeek" id role="tablist" aria-orientation="vertical">
                             {arrNgay.map((date, indexDate) => {
@@ -68,7 +70,7 @@ export default function DetailMovie({list}) {
                                     // console.log(date[i]);
 
                                 return (
-                                    <div className={`nav-link ${indexDate === 0 ? ' active' : ''} listDay`} id={`v-pills-${list[0].maHeThongRap}${index}-tab${indexDate}`} data-bs-toggle="pill" data-bs-target={`#v-pills-${list[0].maHeThongRap}${index}${indexDate}`} aria-controls={`v-pills-${list[0].maHeThongRap}${index}${indexDate}`} aria-selected="true">
+                                    <div key={indexDate} className={`nav-link ${indexDate === 0 ? ' active' : ''} listDay`} id={`v-pills-${list[0].maHeThongRap}${index}-tab${indexDate}`} data-bs-toggle="pill" data-bs-target={`#v-pills-${list[0].maHeThongRap}${index}${indexDate}`} aria-controls={`v-pills-${list[0].maHeThongRap}${index}${indexDate}`} aria-selected="true">
                                         <p className="date">{res}</p>
                                         <p className="numer">{date.slice(0,co)}</p>
                                     </div>
@@ -80,11 +82,11 @@ export default function DetailMovie({list}) {
                         <div className="tab-content wrapContent" id="v-pills-tabContent">
                             {arrNgay.map((date, indexDate) => {
                                 return (
-                                    <div className={`tab-pane fade show ${indexDate === 0 ? ' active' : ''} contents`} id={`v-pills-${list[0].maHeThongRap}${index}${indexDate}`} role="tabpanel" aria-labelledby={`v-pills-${list[0].maHeThongRap}${index}-tab${indexDate}`}>
+                                    <div key={indexDate} className={`tab-pane fade show ${indexDate === 0 ? ' active' : ''} contents`} id={`v-pills-${list[0].maHeThongRap}${index}${indexDate}`} role="tabpanel" aria-labelledby={`v-pills-${list[0].maHeThongRap}${index}-tab${indexDate}`}>
                                         <div className="scrollbar" id="style-2">
                                             {items.danhSachPhim.map((movie, indexMovie) => {
                                                 return (
-                                                    <div className="content-items">
+                                                    <div key={indexMovie} className="content-items">
                                                         <div className="items-movie">
                                                             <img src={movie.hinhAnh} alt="" />
                                                             <div className="movie-info">
@@ -109,13 +111,13 @@ export default function DetailMovie({list}) {
                                                                     if(tam === tam2){
                                                                         let time = new Date(list.ngayChieuGioChieu).toLocaleTimeString().slice(0, 4);
                                                                         return (
-                                                                            <a href="?#" className="watch">
+                                                                            <button key={indexList} className="watch">
                                                                                 <span className="watch-1">{time} </span>
                                                                               
-                                                                            </a>
+                                                                            </button>
                                                                         )
                                                                     }
-                                                                    else return <></>
+                                                                    else return <Fragment key={indexList}></Fragment>
                                                                 })}
                                                                 
                                                                 
@@ -148,9 +150,9 @@ export default function DetailMovie({list}) {
                         <img src={image} alt="" />
                     </div>
                     <div className="detail-info">
-                        <a href="?" className="info-title">
+                        <Link to={`/detail-movie/${list[0].tenHeThongRap}`} className="info-title">
                             <h1>{list.length ? list[0].tenHeThongRap : ''}</h1>
-                        </a>
+                        </Link>
                         <span className="info">
                             <span className="title">Điện thoại:</span>
                             028 62 670 670
@@ -171,7 +173,7 @@ export default function DetailMovie({list}) {
                             <span className="title">Giới thiệu:</span>
                             BHD Star Cineplex ICON 68 là một trong những cụm rạp được đầu tư quy mô nhất hiện nay tại Việt Nam, với tổng diện tích hơn 2.000 m2, bao gồm 7 phòng chiếu được trang bị theo tiêu chuẩn quốc tế. Âm thanh đạt chuẩn Dolby 7.1 với hệ thống cách âm hiện đại, trong đó có 4 phòng 3D,  cùng hơn 1.000 ghế ngồi được thiết kế theo kiểu dáng đẹp mắt và tiện dụng để mang lại sự thoải mái nhất cho khán giả.
                         </span>
-                        <a href="?#" className="button-info">
+                        <a href="#showtime-tabContent" className="button-info">
                             <img src={ticket} alt="" />
                             mua vé
                         </a>

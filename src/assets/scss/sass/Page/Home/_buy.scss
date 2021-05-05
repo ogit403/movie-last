@@ -316,6 +316,10 @@
                                     .seat-number.couple {
                                         padding: 0 26px;
                                     }
+                                    .select-ghe {
+                                        background-color: #44c020;
+                                        border-color: #44c020;
+                                    }
                                     .select-normal {
                                         background-color: #3e515d;
                                     }
@@ -808,6 +812,7 @@
 
                     .login {
                         .title {
+                            pointer-events: none;
                             margin-top: 20px;
                             margin-right: -25px;
                             margin-left: -25px;
@@ -922,6 +927,19 @@
     }
 }
 
+.popup-content {
+    border-radius: 15px;
+    .modal-buy {
+        text-align: center;
+        padding: 50px 0px;
+        font-family: 'Quicksand', sans-serif;
+        p {
+            color: #e82327;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media only screen and (min-width: 1101px) {
     .combo-popup-2 {
         display: none !important;
@@ -955,6 +973,23 @@
     }
 }
 
+@media only screen and (max-width: 900px) {
+    .popup-content {
+        .modal-buy {
+            text-align: center;
+            padding: 50px 0px;
+            font-family: 'Quicksand', sans-serif;
+            p {
+                color: #e82327;
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: 20px !important;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 645px) {
     .buy {
         .range-center, .range-nice {
@@ -969,6 +1004,22 @@
             }
         }
     }
+    .popup-content {
+        .modal-buy {
+            text-align: center;
+            padding: 50px 0px;
+            font-family: 'Quicksand', sans-serif;
+            p {
+                font-size: 12px !important;
+                color: #e82327;
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: 16px !important;
+            }
+        }
+    }
+    
 }
 
 @media only screen and (max-width: 830px) {
@@ -983,6 +1034,25 @@
         .items-datVe {
             display: block;
             max-width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .popup-content {
+        width: 80% !important;
+        .modal-buy {
+            text-align: center;
+            padding: 50px 0px;
+            font-family: 'Quicksand', sans-serif;
+            p {
+                font-size: 14px !important;
+                color: #e82327;
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: 16px !important;
+            }
         }
     }
 }

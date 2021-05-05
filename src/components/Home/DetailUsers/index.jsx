@@ -3,20 +3,21 @@ import '../../../assets/scss/sass/Page/Home/_detail-user.scss';
 import rap from '../../../assets/img/theater/bhd-star-bitexco-16105952137769.png';
 
 export default function DetailUsers(props) {
-    // console.log(props.user);
-
-
+    console.log(props.user);
     const renderDatVe = () => {;
         if(Object.keys(props.user).length){
             return props.user.thongTinDatVe.map((items, index) => {
+                let setTime = new Date(items.ngayDat).toLocaleTimeString();
+                if(setTime[2] === ':') setTime = setTime.slice(0, 5);
+                else setTime = setTime.slice(0,4);
                 return (
-                    <div className="row group-datve">
+                    <div key={index} className="row group-datve">
                         <div className="col-12">
                             <div className="top">
                                 <img src={rap} alt="" />
                                 {items.danhSachGhe.map((ghe, indexGhe) => {
                                     return (
-                                        <div className="info">
+                                        <div key={indexGhe} className="info">
                                             <div className="title">{ghe.tenHeThongRap}</div>
                                             <p style={{fontWeight: 700}}>Tên ghế: {ghe.tenGhe}</p>
                                         </div>
@@ -25,18 +26,32 @@ export default function DetailUsers(props) {
                                 
                             </div>
                             <div className="bottom">
-                                <p style={{marginBottom: 10}}>Tên phim: {items.tenPhim}</p>
-                                <span style={{color: '#000', fontWeight: 700, marginRight: 50}}>
-                                    Ngày đặt: {new Date(items.ngayDat).toLocaleDateString()}
+                                <p className="tenPhim" style={{marginBottom: 10}}>
+                                    Tên phim: <span>{items.tenPhim}</span> 
+                                    </p>
+                                <span class="titlePhim" style={{color: '#000', fontWeight: 700, marginRight: 50}}>
+                                    Ngày đặt: 
+                                    <span>
+                                    {new Date(items.ngayDat).toLocaleDateString()}
+                                    </span>
                                 </span>
-                                <span style={{color: '#000', fontWeight: 700, marginRight: 50}}>
-                                    Giờ đặt: {new Date(items.ngayDat).toLocaleTimeString().substr(0, 5)}
+                                <span class="titlePhim" style={{color: '#000', fontWeight: 700, marginRight: 50}}>
+                                    Giờ đặt:
+                                    <span>
+                                     {setTime}
+                                    </span>
                                 </span>
-                                <span style={{color: '#000', fontWeight: 700, marginRight: 50}}>
-                                    Giá vé: {items.giaVe}
+                                <span class="titlePhim" style={{color: '#000', fontWeight: 700, marginRight: 50}}>
+                                    Giá vé: 
+                                    <span>
+                                    {items.giaVe}
+                                    </span>
                                 </span>
-                                <span style={{color: '#000', fontWeight: 700}}>
-                                    Mã vé: {items.maVe}
+                                <span class="titlePhim" style={{color: '#000', fontWeight: 700}}>
+                                    Mã vé: 
+                                    <span>
+                                    {items.maVe}
+                                    </span>
                                 </span>
                             </div>
                         </div>

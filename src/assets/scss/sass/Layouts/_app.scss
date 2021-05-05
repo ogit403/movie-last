@@ -33,9 +33,10 @@
                 .textBottom {
                     color: #fff;
                      padding-top: 10px;
-                    a {
+                    button {
+                        border: none;
+                        background-color: transparent;
                         color: white;
-                        text-decoration: none;
                         border-bottom: 1px solid white;
                     }
                 }

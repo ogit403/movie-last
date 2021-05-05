@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import Buy from '../../../components/Home/Buy'
 
 
-export default function BuyHome() {
+export default function BuyHome(props) {
     const dispatch = useDispatch();
     
     const user = useSelector(state => state.LoginReducer.users);
@@ -20,7 +20,7 @@ export default function BuyHome() {
 
     return (
         <>
-            <Buy user={user}/>
+            <Buy user={user} history={props.history}/>
         </>
     )
 }

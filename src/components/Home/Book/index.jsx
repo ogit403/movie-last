@@ -1,5 +1,5 @@
 // import userEvent from "@testing-library/user-event";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import './../../../assets/scss/sass/Layouts/_book.scss';
@@ -45,13 +45,13 @@ export default function Book(props) {
         if(Object.keys(movie).length){
             return movie.heThongRapChieu.map((items, index) => {
                 return (
-                    <>
+                    <Fragment key={index}>
                         {items.cumRapChieu.map((movie, indexMovie) => {
                             return (
                                 <option key={indexMovie} value={movie.maCumRap}>{movie.tenCumRap}</option>
                             ) 
                         })}
-                    </>
+                    </Fragment>
                 )
             })
         }
@@ -62,7 +62,7 @@ export default function Book(props) {
         if(Object.keys(movie).length && name){
             return movie.heThongRapChieu.map((items, index) => {
                 return (
-                    <>
+                    <Fragment key={index}>
                         {items.cumRapChieu.map((movie, indexMovie) => {
                             if(movie.maCumRap === name){
                                 let arrNgay = [];
@@ -75,18 +75,18 @@ export default function Book(props) {
                                 })
                                 // console.log(arrNgay);
                                 return (
-                                    <>
+                                    <Fragment key={indexMovie}>
                                         {arrNgay.map((ngay, indexNgay) => {
                                             return (
                                                 <option key={indexNgay} value={new Date(ngay.ngayChieuGioChieu).toLocaleDateString()}>{new Date(ngay.ngayChieuGioChieu).toLocaleDateString()}</option>
                                             )
                                         })}
-                                    </>
+                                    </Fragment>
                                 )
                             }
                             return <></>
                         })}
-                    </>
+                    </Fragment>
                 )
             })
         }
@@ -98,10 +98,10 @@ export default function Book(props) {
         if(Object.keys(movie).length && name){
             return movie.heThongRapChieu.map((items, index) => {
                 return (
-                    <>
+                    <Fragment key={index}>
                         {items.cumRapChieu.map((movie, indexMovie) => {
                             return (
-                                <>
+                                <Fragment key={indexMovie}>
                                     {movie.lichChieuPhim.map((ngay, indexNgay) => {
                                         
                                         if(new Date(ngay.ngayChieuGioChieu).toLocaleDateString() === name){
@@ -112,10 +112,10 @@ export default function Book(props) {
                                         }
                                         else return <></>
                                     })}
-                                </>
+                                </Fragment>
                             )
                         })}
-                    </>
+                    </Fragment>
                 )
             })
         }

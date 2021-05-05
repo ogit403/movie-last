@@ -89,7 +89,7 @@ export default function ListMovie(props) {
 
     const renderSoon2 = () => {
         if(props.listMovie.length){
-            console.log(props.listMovie)
+            // console.log(props.listMovie)
             return props.listMovie.map((items, index) => {
                 return (
                     <div key={index} className="col-12 items">

@@ -41,11 +41,12 @@
                 opacity: 0.8;
             }
             .trailer-button {
-                a {
+                button {
                     position: absolute;
                     top: 35%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    z-index: 0;
                     span {
                         display: block;
                         position: relative;
@@ -77,6 +78,10 @@
                     }
                 }
             }
+        }
+
+        .modal-video-close-btn {
+            z-index: 0;
         }
 
         .detail {

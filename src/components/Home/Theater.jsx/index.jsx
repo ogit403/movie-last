@@ -142,7 +142,7 @@ export default function Theater(props) {
             <div className="wrapper-theater">
                 {/* <button style={{position: 'absolute'}} onClick={() => setOpen(o => !o)}>ABC</button> */}
                 <div className="theater-title">
-                    <a href="?#">Cụm rạp - Lịch chiếu</a>
+                    <a href="?#" style={{pointerEvents: 'none'}}>Cụm rạp - Lịch chiếu</a>
                 </div>
                 <div className="d-flex align-items-start">
                     <div className="nav flex-column nav-pills me-3 theater-first" id="v-pills-tab" role="tablist" aria-orientation="vertical">

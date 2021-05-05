@@ -63,6 +63,19 @@
                 position: relative;
                 width: 100%;
 
+                .tenPhim {
+                    span {
+                        color: #ea3b92;
+                    }
+                }
+
+                .titlePhim {
+                    span {
+                        padding-left: 10px;
+                        color: #ea3b92;
+                    }
+                }
+
                 &:after {
                     content: '';
                     position: absolute;
