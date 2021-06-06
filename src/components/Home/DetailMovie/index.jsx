@@ -251,10 +251,10 @@ export default function DetailMovie({list}) {
                                                         <div className="info">
                                                             <p className="name">
                                                                 Nguyễn Quân
-                          </p>
+                                                            </p>
                                                             <p className="time">
                                                                 24 phút trước
-                          </p>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6 star">

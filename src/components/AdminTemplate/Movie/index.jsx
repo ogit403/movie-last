@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import '../../../assets/scss/sass/Page/Admin/_movie.scss';
+import image from '../../../assets/img/admin/avatar.png';
 
 export default function Movie() {
     const list = useSelector(state => state.AdminMovieReducer.list);
@@ -82,14 +83,16 @@ export default function Movie() {
         }
     }
 
+    const mainUser = JSON.parse(localStorage.getItem("QuanTri"));
+
     return (
         <div className="content">
             <div className="infoUser">
                 <div className="user">
-                    <img src="./img/admin/avatar.png" alt="" />
+                    <img src={image} alt="" />
                     <div className="content-user">
                         <span className="hello">
-                            Chào,<span> Nguyễn Hồng Quân</span>
+                            Chào,<span> {mainUser.hoTen}</span>
                         </span>
                         <p className="type">Admin</p>
                     </div>

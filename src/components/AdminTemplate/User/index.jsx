@@ -94,12 +94,14 @@ export default function User() {
 
     const handleSubmitTimKiem = (e) => {
         e.preventDefault();
-        console.log('abc');
+        // console.log('abc');
         dispatch({
             type: 'GET_API_ADMIN_USER_TIM',
             data: userTimKiem.timKiem
         })
     }
+
+    const mainUser = JSON.parse(localStorage.getItem("QuanTri"));
 
     return (
         <div className="content">
@@ -108,7 +110,7 @@ export default function User() {
                     <img src={image} alt="" />
                     <div className="content-user">
                         <span className="hello">
-                            Chào,<span> Nguyễn Hồng Quân</span>
+                            Chào,<span> {mainUser.hoTen}</span>
                         </span>
                         <p className="type">Admin</p>
                     </div>

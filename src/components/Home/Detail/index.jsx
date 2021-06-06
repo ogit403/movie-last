@@ -6,14 +6,10 @@ import arrow from '../../../assets/img/detail/arrow-down.png';
 import { Link } from 'react-router-dom';
 import icon from '../../../assets/img/detail/icon.jpg'
 import listStar from '../../../assets/img/detail/listStar.png'
-// import xControl from '../../../assets/img/detail/xController.png'
 import starSelect from '../../../assets/img/detail/StarSelect.png'
 import fb from '../../../assets/img/detail/facebook.svg'
 import star1 from '../../../assets/img/detail/star1.png';
-// import star2 from '../../../assets/img/detail/star1.2.png';
-// import like from '../../../assets/img/detail/like.png';
 import { useDispatch, useSelector } from 'react-redux';
-// import Alert from 'react-bootstrap/Alert'
 import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
 import ModalVideo from 'react-modal-video'
 
@@ -243,6 +239,8 @@ export default function Detail(props) {
             
         let i = comments.findIndex(item => item.maPhim === props.items.maPhim);
 
+        const itemsComment = JSON.parse(localStorage.getItem("KhachHang"));
+
         if (i !== -1) {
             let count = 0;
             star.list.forEach((items) => {
@@ -250,7 +248,7 @@ export default function Detail(props) {
             })
 
             let tam = {
-                name: 'Nguyen Van A',
+                name: itemsComment.hoTen,
                 star: count,
                 content: content.content
             }
@@ -273,7 +271,7 @@ export default function Detail(props) {
             })
             let temp = content.content;
             let comment = [{
-                name: 'Nguyen Van A',
+                name: itemsComment.hoTen,
                 star: count,
                 content: temp
             }]
@@ -310,7 +308,7 @@ export default function Detail(props) {
     return (
         <section className="detailPhim ">
             <div className="wrapper-detail container">
-                <div className="trailer">
+                <div className="trailer" style={{backgroundImage: `url(${props.items.hinhAnh})`}}>
                     <div className="overplay" />
                     <div className="trailer-button">
                     <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={idYoutube} onClose={() => setOpen(false)} />

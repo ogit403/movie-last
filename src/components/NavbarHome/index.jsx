@@ -188,9 +188,9 @@ export default function NavbarHome() {
                                     <a className="buy-ticket" href="#book-home">
                                         <img src={datve} alt="" />
                                     </a>
-                                    <a href="?#" className="flags">
+                                    <Link to="?#" style={{pointerEvents: 'none'}} className="flags">
                                         <img src={vn} alt="" />
-                                    </a>
+                                    </Link>
                                     {/*<StyledButton>ABC</StyledButton>*/}
                                     {/*<styledText></styledText>*/}
                                     {/*<form className="d-flex form-search">

@@ -16,7 +16,8 @@ function* postAPILogin(action){
                 localStorage.setItem("KhachHang", JSON.stringify(res.data))
             else if(res.data.maLoaiNguoiDung === "QuanTri")
                 localStorage.setItem("QuanTri", JSON.stringify(res.data))
-                action.history.goBack();
+
+            action.history.push("/");
         }
         else {
             yield put({

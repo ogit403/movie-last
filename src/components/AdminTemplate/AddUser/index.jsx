@@ -61,12 +61,11 @@ export default function AddUser() {
             })
         }
         
-    }, [dangKy, dispatch, params, user.email, user.hoTen, user.maLoaiNguoiDung, user.maNhom, user.matKhau, user.soDT, user.taiKhoan])
+    }, [dangKy])
 
     const handleSubmit = (e) => {
         e.preventDefault();
         let newDangKy = !dangKy;
-        //console.log(user);
         setDangKy(newDangKy)
     }
 
