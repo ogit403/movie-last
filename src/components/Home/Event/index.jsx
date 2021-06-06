@@ -8,9 +8,9 @@ export default function Event(props) {
     const renderEvent = () => {
         if(props.event.length)
             return props.event.map((items, index) => {
-                    let res = Math.floor(index / 2) % 2 ? index % 2 === 0 ? 'left' : 'right' : index % 2 === 0 ? 'right' : 'left';
+                    let temp = Math.floor(index / 2) % 2 ? index % 2 === 0 ? 'left' : 'right' : index % 2 === 0 ? 'right' : 'left';
                     return (
-                        <Link style={{textDecoration: 'none'}} key={index} to={`/detail-event/${items.id}`} className={`items-${res} ${index >= 0 && index <= 7 ? '' : ' d-none'}`}>
+                        <Link style={{textDecoration: 'none'}} key={index} to={`/detail-event/${items.id}`} className={`items-${temp} ${index >= 0 && index <= 7 ? '' : ' d-none'}`}>
                             <div className="info" style={{marginRight: 190}}>
                                 <Link style={{cursor:'pointer', textDecoration:'none'}} className="title">
                                     {items.title}
